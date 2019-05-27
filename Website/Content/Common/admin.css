@@ -1,0 +1,27 @@
+﻿#loading-mask {
+	
+}
+.x-btn-default-toolbar-small {
+    border-color: #d0d0d0!important;
+}
+
+.top-header .x-btn.x-btn-menu-active.x-btn-default-medium {
+		background-color: rgba(0, 0, 0, 0.1)!important;
+		outline: 0;
+}
+.top-header .x-menu-default .x-menu-item-icon-default {
+}
+
+.x-css-shadow{
+    border: 0px solid rgba(0, 0, 0, .15)!important;
+    border-radius: 0px!important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .35)!important;
+}
+
+.header-medium-item .x-btn-inner {
+    font-weight: normal !important;
+}
+
+.x-btn-default-medium .x-btn-glyph {
+    opacity: 1 !important;
+}

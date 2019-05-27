@@ -1,0 +1,24 @@
+﻿@model bool
+
+@{
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div>
+    @if (Model)
+    {
+        <div class="alert alert-success" role="alert">
+            <i class="fa fa-check-circle" style="color:green"></i>
+            @Html.Raw(ViewBag.Message)
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            <i class="fa fa-frown-o" style="color:red"></i>
+            @Html.Raw(ViewBag.Message)
+        </div>
+        <a href="@Url.Action("Login","Account")" style="margin-top:10px"><i class="fa fa-sign-in"></i> Quay lại trang đăng nhập</a>
+    }
+
+</div>

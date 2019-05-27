@@ -1,0 +1,72 @@
+﻿
+/*Dashboard Page Style*/
+.x-btn-default-small {
+    background: #173d59;
+    border-color: #173d59;
+    box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+}
+
+    .x-btn-default-small:hover {
+        background: #00477d;
+    }
+
+    .x-btn-default-small:hover {
+        text-decoration: none;
+    }
+
+.x-toolbar-footer {
+    padding: 9px 15px 8px;
+    background-color: #f8f9fa;
+    border-bottom: 0px #dfe6e8 solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+    .x-toolbar-footer .x-form-item-label-text {
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .x-toolbar-footer .x-form-trigger-wrap-default {
+        border-color: #d2d6da;
+    }
+
+    .x-toolbar-footer input {
+        max-width: 100%;
+    }
+
+.x-panel-header-default {
+    background: #173d59;
+    border-color: #173d59;
+}
+
+    .x-panel-header-default .x-panel-header-title-default {
+        font-size: 14px;
+        font-weight: 600;
+        color: #f8f9fa;
+    }
+
+.x-panel-header-default-horizontal {
+    padding: 10px 15px;
+}
+
+.x-panel-header-default .x-tool-tool-el {
+    border-radius: 100%;
+    background-color: #173d59;
+    color: #00477d;
+    opacity: 0.5;
+}
+
+    .x-panel-header-default .x-tool-tool-el:hover {
+        opacity: 1;
+    }
+.x-tool-img {
+    background-image: url(../images/tools/tool-sprites-light.png) !important;
+}
+
+.dashboard-page.x-panel-body.x-panel-body-default.x-panel-body-default{
+	margin:10px !important;
+}
+
+.dashboard-page .x-container .x-dashboard-column{
+	margin: 15px!important;	
+}

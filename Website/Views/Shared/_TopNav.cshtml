@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNet.Identity
+
+<link href="~/Content/css/_TopNav.css" rel="stylesheet" />
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #1C7A3A!important; border-color: #1C7A3A!important" z-index="1000">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <a href="~/Home/HomePage" class="navbar-brand" style="padding: 2px 2px 2px 0px;">
+            <div class="app-logo-medium"></div>
+        </a>
+    </div>
+    <div class="navbar-collapse collapse" style="padding-right: 1.6em!important; padding-left: 0.6em">
+        <ul class="nav navbar-nav" id="menuTop">
+            <li>
+                <a href="~/Dashboard">
+                    <img src="/images/icon-app/dashboard.png"> Tổng quan
+                </a>
+            </li>
+            <li>
+                <a href="~/Explore">
+                    <img src="/images/icon-app/Building.png"> Khai thác
+                </a>
+            </li>
+            <li>
+                <a href="~/Manager">
+                    <img src="/images/icon-app/processing.png"> Quản lý dử liệu
+                </a>
+            </li>
+            <li>
+                <a href="~/Report">
+                    <img src="/images/icon-app/report.png"> Thống kê
+                </a>
+            </li>
+            <li>
+                <a href="~/Editor">
+                    <img src="/images/icon-app/explore.png"> Biên tập
+                </a>
+            </li>
+        </ul>
+        @Html.Partial("_LoginPartial")
+    </div>
+    
+</div>

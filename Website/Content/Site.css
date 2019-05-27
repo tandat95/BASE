@@ -1,0 +1,315 @@
+﻿
+body {
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+    background: #cecece!important
+}
+.x-mask {
+    background-color: #ffffff85 !important;
+}
+
+/*Trang Chủ*/
+.displayNone{
+    display: none
+}
+
+.x-view-item-focused {
+    outline: 0px dashed #157fcc!important;
+}
+
+.app-logo-medium {
+    background: url(/Content/images/logo_tims.png) 0px no-repeat;
+    width: 270px !important;
+    height: 50px !important;
+}
+
+.app-welcome-title {
+    display: block;
+    color: #333;
+    line-height: normal;
+    text-shadow: 1px -1px 2px #ddd;
+    text-align: center;
+    font-size: 20px;
+	font-weight: 700;
+    text-transform: uppercase;
+    padding: 30px 0 0 0!important;
+}
+.app-welcome-view {
+    text-align: center;
+    padding: 0px !important;
+}
+.app-welcome-view ul {
+    padding: 0px !important;
+}
+    .app-welcome-view ul li {
+        margin: 0;
+        cursor: pointer;
+        width: 300px;
+    }
+
+.app-welcome-item {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background: #FFF;
+	padding:25px 25px;
+}
+    .app-welcome-item a {
+        text-decoration: none
+    }
+
+    .app-welcome-item h5 {
+        color: #333;
+        font-size: 13pt;
+		line-height: 16px;
+        text-decoration: none !important;
+        height: 60px !important;
+        display: block;
+        margin: 0px !important;
+        padding:15px 0 !important;
+        font-weight: 700;
+    }
+
+    .app-welcome-item .img-wrap {
+        border-radius: 0px;
+        padding: 30px 0 10px 0 !important;
+        border: none;
+        outline: none;
+        display: block;
+        position: relative;
+    }
+    .app-welcome-item .thumbnail {
+        display: block;
+        padding: 0px;
+        margin-bottom: 0px;
+        line-height: 1.42857143;
+		
+		background-color: #fff;
+		background-clip: border-box;
+		border: 1px solid rgba(0,0,0,.125);
+		border-radius: .25rem;
+		box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+		
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+    }
+        .app-welcome-item .thumbnail:hover {
+            border-color: #0193cf;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.15);
+        }
+            .app-welcome-item .thumbnail:hover h5 {
+                color: #0193cf;
+            }
+		.app-welcome-item.x-view-item-focused{
+			outline: none!important;
+		}
+
+
+/*End-Trang Chủ*/
+
+/*LogIn - LogOut*/
+#navLogOut li a, #navLogIn li a {
+    color: #ffffff !important;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+    .form-signin .checkbox {
+        font-weight: 400;
+    }
+
+    .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+/* Set padding to keep content from hitting the edges */
+
+.paddingTop80{
+    padding-top: 80px!important;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 480px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+/*TopHeader Style*/
+.top-header{
+	z-index: 1001;
+	box-shadow: 0 0.25em 2em 0 rgba(0, 0, 0, 0.2) !important;
+}
+.top-header .app-logo-medium {
+    background:url(/Content/images/logo_tims.png) 10px no-repeat;
+    width: 270px !important;
+    height: 50px !important;
+}
+.top-header .x-btn-default-medium {
+}
+
+    .top-header .x-btn-default-medium:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+    }
+	.top-header .x-btn-icon-el-default-medium.x-btn-glyph{
+		opacity: 0.75;
+	}
+	.top-header .x-btn-icon-el-default-medium:hover.x-btn-glyph{
+		opacity: 1;
+	}
+	.top-header .x-btn-menu-active.x-btn-default-medium{
+		background-color: rgba(0, 0, 0, 0.1)!important;
+		outline: 0 !important;
+	}
+	.top-header .x-btn-inner-default-medium{
+		padding: 0 0 0 8px!important;
+	}
+	.top-header .x-btn-default-medium.x-btn-presses{
+		outline: 0!important;
+	}
+
+.top-header .header-medium-item{
+}
+	.top-header .header-medium-item:hover{
+		background-color: rgba(255, 255, 255, 0.1);
+		text-decoration: none!important;
+	}
+	.top-header .header-medium-item.x-btn-pressed{
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+	.top-header .x-btn-pressed.x-btn-default-medium {
+		background-color: rgba(0, 0, 0, 0.1)!important;
+		outline: 0;
+	}
+	.top-header .x-btn.x-btn-menu-active.x-btn-default-medium {
+		background-color: rgba(0, 0, 0, 0.1)!important;
+		outline: 0;
+	}
+
+/*End TopHeader Style*/
+
+
+.x-fa:before {
+    font-family: FontAwesome !important;
+}
+
+/*Dropmenu Style*/
+.account-header-item{
+	border: 0px !important;
+	outline: 0 !important;
+}
+.x-menu-default{
+	background: #FFF!important;
+	border: 0px!important;
+}
+.x-menu-default .x-menu-icon-separator-default,
+.x-menu-default .x-menu-icon-separator-default:hover{
+	display: none!important;
+}
+.x-menu-default .x-menu-item-default{
+	border: 0px !important;
+}
+.x-menu-default .x-menu-item-default.x-menu-item-focus,
+.x-menu-default .x-menu-item-default.x-menu-item-active{
+	background-color: rgba(0, 144, 83, 0.1)!important;
+}
+
+.x-menu-default .x-menu-item-text-default {
+	font: 300 14px/18px helvetica,arial,verdana,sans-serif!important;
+	color: #000!important;
+	padding: 10px 0!important;
+	line-height: 15px!important;
+	margin-left: 36px!important;
+	margin-right: 16px!important;
+}
+.x-menu-default .x-menu-item-link{
+	outline: 0!important;
+}
+.x-menu-default .x-menu-item-icon-default {
+	width: 16px!important;
+    height: 16px!important;
+	top: 7px!important;
+    left: 10px!important;
+    background-position: center center;
+}
+.x-menu-default .x-menu-item-icon-default.x-menu-item-glyph {
+    opacity: .5!important;
+}
+.x-menu-default .x-menu-item-focus .x-menu-item-icon-default.x-menu-item-glyph {
+	color: gray!important;
+    opacity: 1!important;
+}
+
+
+/*End Dropmenu Style*/
+
+
+/*Report-PAGE STYLE*/
+.reportPage .x-panel-header-default {
+    background: #0077a9 !important;
+    border-color: #0077a9 !important;
+}
+
+
+
+.x-colorpicker-field-swatch-inner {
+    z-index: 1 !important;
+}
+
+#loading-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    background-color: #0193CF !important;
+}

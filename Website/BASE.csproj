@@ -1,0 +1,1610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1102AA19-5665-44A5-AF28-53E5377B288B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BASE</RootNamespace>
+    <AssemblyName>BASE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.68.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Combres">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\Combres.dll</HintPath>
+    </Reference>
+    <Reference Include="Combres.Mvc">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\Combres.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\EcmaScript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET.modified">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\EcmaScript.NET.modified.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasterflect">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Log4Mongo">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\Log4Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.AspNet.Identity">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\MongoDB.AspNet.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\MongoDB.Driver.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Web">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\MongoDB.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.13.3.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.GeoJSON, Version=1.13.3.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\NetTopologySuite.IO.GeoJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\MongoDB\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VDMS.ContentRepository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.ContentRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.ContentRepository.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.ContentRepository.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Identity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Library.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Library.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Notification.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Notification.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Report">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Report.Library">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Report.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Service.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Service.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Web.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Web.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VDMS.Website">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\VDMS\VDMS.Website.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\..\..\VDMS5_Solution\Dependencies\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Languages.Designer.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="App_GlobalResources\Languages1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Languages.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MarkerIcon.ashx.cs">
+      <DependentUpon>MarkerIcon.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MeViewModels.cs" />
+    <Compile Include="Models\Objects\BasePropertiesModel.cs" />
+    <Compile Include="Models\Objects\NodeInfo.cs" />
+    <Compile Include="Models\ResetPasswordModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\minres.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Common\admin.css" />
+    <Content Include="Content\Common\common.css" />
+    <Content Include="Content\Common\tab-navigation.css" />
+    <Content Include="Content\css\images\bg-login.jpg" />
+    <Content Include="Content\css\images\bg-login.png" />
+    <Content Include="Content\css\images\circle.png" />
+    <Content Include="Content\css\images\cross.png" />
+    <Content Include="Content\css\images\document-type\avi.png" />
+    <Content Include="Content\css\images\document-type\css.png" />
+    <Content Include="Content\css\images\document-type\dll.png" />
+    <Content Include="Content\css\images\document-type\doc.png" />
+    <Content Include="Content\css\images\document-type\docx.png" />
+    <Content Include="Content\css\images\document-type\eps.png" />
+    <Content Include="Content\css\images\document-type\html.png" />
+    <Content Include="Content\css\images\document-type\jpg.png" />
+    <Content Include="Content\css\images\document-type\mov.png" />
+    <Content Include="Content\css\images\document-type\mp3.png" />
+    <Content Include="Content\css\images\document-type\pdf.png" />
+    <Content Include="Content\css\images\document-type\png.png" />
+    <Content Include="Content\css\images\document-type\ppt.png" />
+    <Content Include="Content\css\images\document-type\psd.png" />
+    <Content Include="Content\css\images\document-type\txt.png" />
+    <Content Include="Content\css\images\document-type\unknow.png" />
+    <Content Include="Content\css\images\document-type\wav.png" />
+    <Content Include="Content\css\images\document-type\xls.png" />
+    <Content Include="Content\css\images\document-type\xlsx.png" />
+    <Content Include="Content\css\images\document-type\zip.png" />
+    <Content Include="Content\css\images\grab.cur" />
+    <Content Include="Content\css\images\hand.cur" />
+    <Content Include="Content\css\images\iviewer.rotate_left.png" />
+    <Content Include="Content\css\images\iviewer.rotate_right.png" />
+    <Content Include="Content\css\images\iviewer.zoom_fit.gif" />
+    <Content Include="Content\css\images\iviewer.zoom_in.gif" />
+    <Content Include="Content\css\images\iviewer.zoom_out.gif" />
+    <Content Include="Content\css\images\iviewer.zoom_zero.gif" />
+    <Content Include="Content\css\images\VDMS_banner.png" />
+    <Content Include="Content\css\images\logo-VDMS.png" />
+    <Content Include="Content\css\images\logo-VDMS2.png" />
+    <Content Include="Content\css\images\logo.png" />
+    <Content Include="Content\css\images\logo_mobile.png" />
+    <Content Include="Content\css\images\separator.png" />
+    <Content Include="Content\css\images\upload-icon.png" />
+    <Content Include="Content\css\images\user-default.png" />
+    <Content Include="Content\css\util.css" />
+    <Content Include="Content\css\login-v1.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\_default.css" />
+    <Content Include="Content\css\_TopNav.css" />
+    <Content Include="Content\Dashboard\dashboard.css" />
+    <Content Include="Content\ext-theme\config.rb" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\demo-files\demo.css" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\demo-files\demo.js" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\demo.html" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\fonts\ext-watermark.eot" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\fonts\ext-watermark.svg" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\fonts\ext-watermark.ttf" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\fonts\ext-watermark.woff" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\Read Me.txt" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\selection.json" />
+    <Content Include="Content\ext-theme\resources\ext\ext-watermark\style.css" />
+    <Content Include="Content\ext-theme\resources\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\ext-theme\resources\font-ext\fonts\ExtJS.svg" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-arrow-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-arrow-open.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-split-arrow-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-split-arrow-open.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-split-arrow-over-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-split-arrow-over.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-split-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\breadcrumb\default-split-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\btn-group\btn-group-default-framed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn-group\btn-group-default-framed-notitle-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn-group\btn-group-default-framed-notitle-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn-group\btn-group-default-framed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-large-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-medium-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-small-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-large-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-medium-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-default-toolbar-small-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-large-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-focus-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-focus-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-pressed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\btn\btn-plain-toolbar-small-pressed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\button\default-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\default-toolbar-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\grid-cell-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\grid-cell-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\grid-cell-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\grid-cell-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\grid-cell-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\button\plain-toolbar-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\datepicker\arrow-left.png" />
+    <Content Include="Content\ext-theme\resources\images\datepicker\arrow-right.png" />
+    <Content Include="Content\ext-theme\resources\images\datepicker\month-arrow.png" />
+    <Content Include="Content\ext-theme\resources\images\dd\drop-add.png" />
+    <Content Include="Content\ext-theme\resources\images\dd\drop-no.png" />
+    <Content Include="Content\ext-theme\resources\images\dd\drop-yes.png" />
+    <Content Include="Content\ext-theme\resources\images\editor\tb-sprite.png" />
+    <Content Include="Content\ext-theme\resources\images\fieldset\collapse-tool.png" />
+    <Content Include="Content\ext-theme\resources\images\form\checkbox.png" />
+    <Content Include="Content\ext-theme\resources\images\form\clear-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\clear-trigger.png" />
+    <Content Include="Content\ext-theme\resources\images\form\date-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\date-trigger.png" />
+    <Content Include="Content\ext-theme\resources\images\form\exclamation.png" />
+    <Content Include="Content\ext-theme\resources\images\form\radio.png" />
+    <Content Include="Content\ext-theme\resources\images\form\search-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\search-trigger.png" />
+    <Content Include="Content\ext-theme\resources\images\form\spinner-down-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\spinner-down.png" />
+    <Content Include="Content\ext-theme\resources\images\form\spinner-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\spinner-up-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\spinner-up.png" />
+    <Content Include="Content\ext-theme\resources\images\form\spinner.png" />
+    <Content Include="Content\ext-theme\resources\images\form\tag-field-item-close.png" />
+    <Content Include="Content\ext-theme\resources\images\form\trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\form\trigger.png" />
+    <Content Include="Content\ext-theme\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\grid\col-move-bottom.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\col-move-top.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\columns.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\dd-insert-arrow-left.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\dd-insert-arrow-right.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\dirty-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\dirty.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\drop-no.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\drop-yes.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\filters\equals.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\filters\find.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\filters\greater_than.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\filters\less_than.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\group-by.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\group-collapse.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\group-expand.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\hd-pop.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\hmenu-asc.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\hmenu-desc.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\hmenu-lock.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\hmenu-unlock.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\loading.gif" />
+    <Content Include="Content\ext-theme\resources\images\grid\page-first.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\page-last.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\page-next.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\page-prev.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\pick-button.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\refresh.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\sort_asc.png" />
+    <Content Include="Content\ext-theme\resources\images\grid\sort_desc.png" />
+    <Content Include="Content\ext-theme\resources\images\loadmask\loading.gif" />
+    <Content Include="Content\ext-theme\resources\images\magnify.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-checked.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-group-checked.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-menu-parent-left.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-menu-parent.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-menubar-menu-parent.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\images\menu\default-unchecked.png" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-collapsed-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-left-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-right-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-default-framed-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-collapsed-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-left-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-right-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel-header\panel-header-light-framed-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel\panel-default-framed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel\panel-default-framed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel\panel-light-framed-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\panel\panel-light-framed-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\shared\icon-error.png" />
+    <Content Include="Content\ext-theme\resources\images\shared\icon-info.png" />
+    <Content Include="Content\ext-theme\resources\images\shared\icon-question.png" />
+    <Content Include="Content\ext-theme\resources\images\shared\icon-warning.png" />
+    <Content Include="Content\ext-theme\resources\images\sizer\e-handle.png" />
+    <Content Include="Content\ext-theme\resources\images\sizer\ne-handle.png" />
+    <Content Include="Content\ext-theme\resources\images\sizer\nw-handle.png" />
+    <Content Include="Content\ext-theme\resources\images\sizer\s-handle.png" />
+    <Content Include="Content\ext-theme\resources\images\sizer\se-handle.png" />
+    <Content Include="Content\ext-theme\resources\images\sizer\sw-handle.png" />
+    <Content Include="Content\ext-theme\resources\images\slider\slider-bg.png" />
+    <Content Include="Content\ext-theme\resources\images\slider\slider-thumb.png" />
+    <Content Include="Content\ext-theme\resources\images\slider\slider-v-bg.png" />
+    <Content Include="Content\ext-theme\resources\images\slider\slider-v-thumb.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-more-left.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-more.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-plain-more-left.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-plain-more.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-plain-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-plain-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-plain-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-plain-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\images\tab-bar\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-disabled-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-close.png" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-disabled-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-disabled-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-disabled-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-disabled-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-disabled-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-active-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-active-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-active-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-focus-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-over-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-over-fbg.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-over-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tab\tab-default-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tip\tip-default-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tip\tip-default-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\tip\tip-form-invalid-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\tip\tip-form-invalid-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\default-more-left.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\default-more.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\footer-more-left.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\footer-more.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\footer-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\images\toolbar\footer-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\images\tools\tool-sprites-dark.png" />
+    <Content Include="Content\ext-theme\resources\images\tools\tool-sprites-light.png" />
+    <Content Include="Content\ext-theme\resources\images\tools\tool-sprites.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\arrows-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\arrows.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-above.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-add.gif" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-add.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-append.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-below.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-between.gif" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-between.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-no.gif" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-no.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-over.gif" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-over.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-under.gif" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-under.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-yes.gif" />
+    <Content Include="Content\ext-theme\resources\images\tree\drop-yes.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-end-minus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-end-minus.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-end-plus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-end-plus.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-end-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-end.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-line-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-line.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-minus-nl-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-minus-nl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-minus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-minus.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-plus-nl-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-plus-nl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-plus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-plus.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\elbow.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\folder-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\folder-open.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\folder-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\folder.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\leaf-rtl.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\leaf.png" />
+    <Content Include="Content\ext-theme\resources\images\tree\loading.gif" />
+    <Content Include="Content\ext-theme\resources\images\util\splitter\mini-bottom.png" />
+    <Content Include="Content\ext-theme\resources\images\util\splitter\mini-left.png" />
+    <Content Include="Content\ext-theme\resources\images\util\splitter\mini-right.png" />
+    <Content Include="Content\ext-theme\resources\images\util\splitter\mini-top.png" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-bottom-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-bottom-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-left-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-right-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-collapsed-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-left-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-left-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-left-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-right-corners-rtl.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-right-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-right-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-top-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window-header\window-header-default-top-sides.gif" />
+    <Content Include="Content\ext-theme\resources\images\window\toast\fade-blue.png" />
+    <Content Include="Content\ext-theme\resources\images\window\toast\fader.png" />
+    <Content Include="Content\ext-theme\resources\images\window\toast\icon16_error.png" />
+    <Content Include="Content\ext-theme\resources\images\window\toast\icon16_info.png" />
+    <Content Include="Content\ext-theme\resources\images\window\window-default-corners.gif" />
+    <Content Include="Content\ext-theme\resources\images\window\window-default-sides.gif" />
+    <Content Include="Content\ext-theme\resources\Readme.md" />
+    <Content Include="Content\ext-theme\resources\theme-base\Readme.md" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-debug.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-debug_1.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-debug_2.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-rtl-debug.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-rtl-debug_1.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-rtl-debug_2.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-rtl.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-rtl_1.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all-rtl_2.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all_1.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp-VDMS-all_2.css" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-arrow-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-arrow-open.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-split-arrow-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-split-arrow-open.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-split-arrow-over-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-split-arrow-over.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-split-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\breadcrumb\default-split-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\default-toolbar-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\grid-cell-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\grid-cell-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\grid-cell-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\grid-cell-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\grid-cell-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\button\plain-toolbar-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\datepicker\arrow-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\datepicker\arrow-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\datepicker\month-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\editor\tb-sprite.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\fieldset\collapse-tool.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\checkbox.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\clear-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\clear-trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\date-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\date-trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\exclamation.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\radio.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\search-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\search-trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\spinner-down-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\spinner-down.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\spinner-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\spinner-up-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\spinner-up.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\spinner.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\tag-field-item-close.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\form\trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\columns.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\filters\equals.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\filters\find.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\filters\greater_than.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\filters\less_than.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\group-by.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\group-collapse.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\group-expand.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\hd-pop.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\hmenu-asc.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\hmenu-desc.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\hmenu-lock.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\hmenu-unlock.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\page-first.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\page-last.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\page-next.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\page-prev.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\refresh.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\sort_asc.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\grid\sort_desc.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-checked.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-group-checked.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-menu-parent-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-menu-parent.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-menubar-menu-parent.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\menu\default-unchecked.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\shared\icon-error.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\shared\icon-info.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\shared\icon-question.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\shared\icon-warning.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-plain-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-plain-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-plain-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-plain-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-plain-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-plain-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab-bar\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tab\tab-default-close.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\default-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\default-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\footer-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\footer-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\footer-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\toolbar\footer-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tools\tool-sprites-dark.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tools\tool-sprites.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\arrows-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\arrows.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-end-minus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-end-minus.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-end-plus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-end-plus.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-end-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-end.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-line-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-line.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-minus-nl-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-minus-nl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-minus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-minus.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-plus-nl-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-plus-nl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-plus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-plus.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\elbow.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\folder-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\folder-open.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\folder-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\folder.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\leaf-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\tree\leaf.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\util\splitter\mini-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\util\splitter\mini-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\util\splitter\mini-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\images\util\splitter\mini-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-crisp\Readme.md" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-arrow-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-arrow-open.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-split-arrow-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-split-arrow-open.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-split-arrow-over-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-split-arrow-over.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-split-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\breadcrumb\default-split-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\default-toolbar-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\grid-cell-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\grid-cell-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\grid-cell-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\grid-cell-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\grid-cell-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-large-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-large-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-large-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-large-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-medium-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-medium-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-small-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-small-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-small-s-arrow-b.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\button\plain-toolbar-small-s-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\datepicker\arrow-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\datepicker\arrow-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\datepicker\month-arrow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\dd\drop-add.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\dd\drop-no.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\dd\drop-yes.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\editor\tb-sprite.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\fieldset\collapse-tool.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\checkbox.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\clear-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\clear-trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\date-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\date-trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\exclamation.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\radio.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\search-trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\search-trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\spinner-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\spinner.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\tag-field-item-close.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\trigger-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\form\trigger.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\col-move-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\col-move-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\columns.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\dd-insert-arrow-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\dd-insert-arrow-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\dirty-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\dirty.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\drop-no.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\drop-yes.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\filters\equals.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\filters\find.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\filters\greater_than.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\filters\less_than.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\group-by.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\group-collapse.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\group-expand.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\hd-pop.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\hmenu-asc.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\hmenu-desc.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\hmenu-lock.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\hmenu-unlock.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\loading.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\page-first.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\page-last.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\page-next.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\page-prev.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\pick-button.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\refresh.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\sort_asc.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\grid\sort_desc.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\loadmask\loading.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-checked.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-group-checked.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-menu-parent-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-menu-parent.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-menubar-menu-parent.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\menu\default-unchecked.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\shared\icon-error.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\shared\icon-info.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\shared\icon-question.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\shared\icon-warning.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\sizer\e-handle.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\sizer\ne-handle.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\sizer\nw-handle.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\sizer\s-handle.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\sizer\se-handle.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\sizer\sw-handle.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\slider\slider-bg.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\slider\slider-thumb.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\slider\slider-v-bg.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\slider\slider-v-thumb.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-plain-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-plain-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-plain-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-plain-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-plain-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-plain-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab-bar\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tab\tab-default-close.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\default-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\default-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\default-scroll-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\default-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\default-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\default-scroll-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\footer-more-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\footer-more.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\footer-scroll-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\toolbar\footer-scroll-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tools\tool-sprites-dark.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tools\tool-sprites.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\arrows-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\arrows.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-above.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-add.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-add.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-append.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-below.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-between.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-between.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-no.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-no.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-over.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-over.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-under.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-under.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-yes.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\drop-yes.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-end-minus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-end-minus.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-end-plus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-end-plus.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-end-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-end.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-line-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-line.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-minus-nl-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-minus-nl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-minus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-minus.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-plus-nl-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-plus-nl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-plus-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-plus.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\elbow.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\folder-open-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\folder-open.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\folder-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\folder.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\leaf-rtl.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\leaf.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\tree\loading.gif" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\util\splitter\mini-bottom.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\util\splitter\mini-left.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\util\splitter\mini-right.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\images\util\splitter\mini-top.png" />
+    <Content Include="Content\ext-theme\resources\theme-neptune\Readme.md" />
+    <Content Include="Content\ext-theme\resources\theme-neutral\images\magnify.png" />
+    <Content Include="Content\ext-theme\resources\theme-neutral\images\window\toast\fade-blue.png" />
+    <Content Include="Content\ext-theme\resources\theme-neutral\images\window\toast\fader.png" />
+    <Content Include="Content\ext-theme\resources\theme-neutral\images\window\toast\icon16_error.png" />
+    <Content Include="Content\ext-theme\resources\theme-neutral\images\window\toast\icon16_info.png" />
+    <Content Include="Content\ext-theme\resources\theme-neutral\Readme.md" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-Bold.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-BoldItalic.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-ExtraBold.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-Italic.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-Light.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-LightItalic.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-Regular.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-Semibold.ttf" />
+    <Content Include="Content\ext-theme\resources\theme-triton\fonts\OpenSans-SemiboldItalic.ttf" />
+    <Content Include="Content\ext-theme\theme-crisp-VDMS-all-debug.scss" />
+    <Content Include="Content\ext-theme\theme-crisp-VDMS-all-rtl-debug.scss" />
+    <Content Include="Content\ext-theme\theme-crisp-VDMS-debug.js" />
+    <Content Include="Content\ext-theme\theme-crisp-VDMS.js" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Content\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Content\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\Home\home.css" />
+    <Content Include="Content\Home\main.css" />
+    <Content Include="Content\Images\database.png" />
+    <Content Include="Content\Images\delete.png" />
+    <Content Include="Content\Images\exp-col-close.png" />
+    <Content Include="Content\Images\exp-col.png" />
+    <Content Include="Content\Images\folder.png" />
+    <Content Include="Content\Images\ic_baixe_1x.png" />
+    <Content Include="Content\Images\ic_camdao_1x.png" />
+    <Content Include="Content\Images\ic_camdungdau_1x.png" />
+    <Content Include="Content\Images\ic_capphep_1x.png" />
+    <Content Include="Content\Images\ic_capphep_2x.png" />
+    <Content Include="Content\Images\ic_cau_1x.png" />
+    <Content Include="Content\Images\ic_congtrinhthicong_1x.png" />
+    <Content Include="Content\Images\ic_dentinhieu_1x.png" />
+    <Content Include="Content\Images\ic_dientichcaytrong_1x.png" />
+    <Content Include="Content\Images\ic_duong_1x.png" />
+    <Content Include="Content\Images\ic_giaothong_2x.png" />
+    <Content Include="Content\Images\ic_nhavesinh_1x.png" />
+    <Content Include="Content\Images\ic_tramxang_1x.png" />
+    <Content Include="Content\Images\location-a-z.png" />
+    <Content Include="Content\Images\logo_VDMS.png" />
+    <Content Include="Content\Images\logo_VDMS_print.png" />
+    <Content Include="Content\Images\marker-wrap-select.png" />
+    <Content Include="Content\Images\marker-wrap.png" />
+    <Content Include="Content\Images\radio.png" />
+    <Content Include="Content\Images\tools\tool-sprites-dark.png" />
+    <Content Include="Content\Images\tools\tool-sprites-light.png" />
+    <Content Include="Content\Images\tools\tool-sprites.png" />
+    <Content Include="Content\MailTemplate\ResetMail.htm" />
+    <Content Include="Content\SiteBootstrap.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\db.config" />
+    <Content Include="Config\appSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\log4net.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Languages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Languages1.designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Scripts\CustomSwagger.js" />
+    <Content Include="images\bando.png" />
+    <Content Include="images\bieudodoc.png" />
+    <Content Include="images\bieudongang.png" />
+    <Content Include="images\blink1.gif" />
+    <Content Include="images\blink2.gif" />
+    <Content Include="images\chart\area.png" />
+    <Content Include="images\chart\bar.png" />
+    <Content Include="images\chart\barstack.png" />
+    <Content Include="images\chart\column.png" />
+    <Content Include="images\chart\columnstack.png" />
+    <Content Include="images\chart\geo.png" />
+    <Content Include="images\chart\line.png" />
+    <Content Include="images\chart\pie.png" />
+    <Content Include="images\chart\table.png" />
+    <Content Include="images\default-marker.png" />
+    <Content Include="images\empty.png" />
+    <Content Include="images\funnel-plus-icon.png" />
+    <Content Include="images\icon-app\admin.png" />
+    <Content Include="images\icon-app\editor.png" />
+    <Content Include="images\icon-app\explore.png" />
+    <Content Include="images\icon-app\manage.png" />
+    <Content Include="images\icon-app\report.png" />
+    <Content Include="images\icon-app\web-dev\admin.png" />
+    <Content Include="images\icon-app\web-dev\dashboard.png" />
+    <Content Include="images\icon-app\web-dev\editor.png" />
+    <Content Include="images\icon-app\web-dev\explore.png" />
+    <Content Include="images\icon-app\web-dev\manage.png" />
+    <Content Include="images\icon-app\web-dev\report.png" />
+    <Content Include="images\inbox-document-text.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\map.png" />
+    <Content Include="images\minus-circle.png" />
+    <Content Include="images\navigation-090.png" />
+    <Content Include="images\navigation-270.png" />
+    <Content Include="images\nav\settings.png" />
+    <Content Include="images\plus-circle.png" />
+    <Content Include="images\point-1.gif" />
+    <Content Include="images\preview.gif" />
+    <Content Include="images\remove-icon.png" />
+    <Content Include="images\report_chart.png" />
+    <Content Include="images\report_map.png" />
+    <Content Include="images\report_table.png" />
+    <Content Include="images\rss.png" />
+    <Content Include="images\table-icon.png" />
+    <Content Include="images\table-relationship-icon.png" />
+    <Content Include="images\timkiem.png" />
+    <Content Include="images\upload\default.gif" />
+    <Content Include="Scripts\Common\controller\TreeNavigation.js" />
+    <Content Include="Scripts\Common\controller\Navigation.js" />
+    <Content Include="Scripts\Common\ExcelGrid.js" />
+    <Content Include="Scripts\Common\view\TreeNavigation.js" />
+    <Content Include="Scripts\Common\view\Navigation.js" />
+    <Content Include="Content\css\images\document-type\Thumbs.db" />
+    <Content Include="MarkerIcon.ashx" />
+    <Content Include="Config\clients.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\services.config" />
+    <Content Include="Config\extensions.config" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\ext-theme\resources\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\ext-theme\resources\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\ext-theme\resources\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\ext-theme\resources\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\ext-theme\resources\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\ext-theme\resources\font-ext\fonts\ExtJS.eot" />
+    <Content Include="Content\ext-theme\resources\font-ext\fonts\ExtJS.ttf" />
+    <Content Include="Content\ext-theme\resources\font-ext\fonts\ExtJS.woff" />
+    <Content Include="Content\ext-theme\resources\theme-triton\Readme.md" />
+    <Content Include="Config\identity.config" />
+    <None Include="Properties\PublishProfiles\10.222.0.10.pubxml" />
+    <Content Include="Scripts\Home\controller\HomeViewport.js" />
+    <Content Include="Scripts\Home\controller\Welcome.js" />
+    <Content Include="Scripts\Home\Home.js" />
+    <Content Include="Scripts\Home\view\HomeViewport.js" />
+    <Content Include="Scripts\Home\view\Welcome.js" />
+    <Content Include="Scripts\Shared\controller\InstructionWindow.js" />
+    <Content Include="Scripts\Shared\controller\MapEditorForm.js" />
+    <Content Include="Scripts\Shared\controller\SharedPrintPage.js" />
+    <Content Include="Scripts\Shared\view\CabinetForm.js" />
+    <Content Include="Scripts\Shared\view\CollapsibleTab.js" />
+    <Content Include="Scripts\Shared\view\ContextMenu.js" />
+    <Content Include="Scripts\Shared\view\InstructionWindow.js" />
+    <Content Include="Scripts\Shared\view\LPRCameraForm.js" />
+    <Content Include="Scripts\Shared\view\SharedPrintPage.js" />
+    <Content Include="Scripts\Shared\view\TrafficLightForm.js" />
+    <Content Include="Scripts\UserInfo_Override\override_UserProfileController.js" />
+    <Content Include="Scripts\UserInfo_Override\override_UserProfileView.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\_LayoutAccount.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Shared\_LayoutDefault.cshtml" />
+    <Content Include="Views\Shared\_TopNav.cshtml" />
+    <Content Include="Views\Shared\_PartialBootstrap.cshtml" />
+    <Content Include="Views\Shared\_AnalyticsUserControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\" />
+    <Folder Include="Content\css\images\iconTopNav\" />
+    <Folder Include="Content\js\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\Helper\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59770</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8015</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

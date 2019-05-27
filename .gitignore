@@ -1,0 +1,12 @@
+﻿packages/
+bin/
+obj/
+*.suo
+*.bak
+*.user
+*.log
+*.pdb
+.vs/
+Document/VDB/
+bin40/
+/.vscode

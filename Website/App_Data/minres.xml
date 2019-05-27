@@ -1,0 +1,2138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--COMBRES VDMS VERSION: 2019.03.28.001-->
+<combres xmlns='urn:combres'>
+    <filters>
+        <filter type="Combres.Filters.FixUrlsInCssFilter, Combres"/>
+    </filters>
+    <jsMinifiers>
+        <minifier name="yui" type="Combres.Minifiers.YuiJSMinifier, Combres">
+            <param name="IsVerboseLogging" type="bool" value="false" />
+            <param name="ObfuscateJavascript" type="bool" value="true" />
+            <param name="PreserveAllSemicolons" type="bool" value="false" />
+            <param name="DisableOptimizations" type="bool" value="false" />
+            <param name="IgnoreEval" type="bool" value="true" />
+            <param name="LineBreakPosition" type="int" value="-1" />
+        </minifier>
+        <minifier name="msajax" type="Combres.Minifiers.MSAjaxJSMinifier, Combres">
+            <param name="EvalTreatment" type="string" value="MakeAllSafe" />
+            <param name="MacSafariQuirks" type="bool" value="true" />
+            <param name="LocalRenaming" type="string" value="CrunchAll" />
+            <param name="OutputMode" type="string" value="SingleLine" />
+            <param name="RemoveUnneededCode" type="bool" value="true" />
+            <param name="StripDebugStatements" type="bool" value="true" />
+        </minifier>
+    </jsMinifiers>
+    <resourceSets url="~/combres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                localChangeMonitorInterval="30"
+                remoteChangeMonitorInterval="60"
+                defaultJSMinifierRef="msajax"
+                defaultDebugEnabled="true"
+                defaultIgnorePipelineWhenDebug="true">
+
+        <!-- Theme -->
+        <resourceSet name="ExtJs6ThemeVDMS5CSS" type="css" debugEnabled="true">
+            <resource path="~/Content/ext-theme/resources/theme-crisp-tims-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/triton/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/triton/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+        <resourceSet name="ExtJs6ThemeVDMS5JS" type="js" debugEnabled="true">
+            <resource path="~/Content/ext-theme/theme-crisp-tims.js" />
+        </resourceSet>
+        <!-- /Theme -->
+
+        <!-- Extjs -->
+        <resourceSet name="ExtJsStyle" type="css" >
+            <resource path="~/cdn/ExtJS/4.2.1/resources/ext-theme-neptune/ext-theme-neptune-all.css" />
+
+            <resource path="~/cdn/ExtJS/4.2.1/ux/css/CheckboxListCombo.css" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/css/CheckHeader.css" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/ClearButton/ClearButton.css" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/colorpicker/css/colorpicker.css" />
+
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/css/SearchField.css" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/css/MapField.css" />
+        </resourceSet>
+        <resourceSet name="ExtJsUxScript" type="js" >
+            <resource path="~/cdn/ExtJS/4.2.1/ux/Router.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/BoxReorderer.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/ClearButton/ClearButton.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/colorpicker/ColorPicker.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/colorpicker/ColorPickerField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/data/PagingMemoryProxy.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/DataViewTransition.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/DataView/Animated.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/DynamicStyleState.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/Exporter.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/Formatter.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/downloadify.min.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/Button.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/Base64.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/csvFormatter/CsvFormatter.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/excelFormatter/ExcelFormatter.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/excelFormatter/Cell.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/excelFormatter/Worksheet.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/excelFormatter/Style.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/exporter/excelFormatter/Workbook.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/form/Ext.form.field.TinyMCE.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/form/Ext.form.field.CodeMirror.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/form/MultiSelect.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/form/CheckboxListCombo.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/grid/Printer.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/GridValidator.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/layout/component/form/MultiSelect.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/PreviewPlugin.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ux/RowExpander.js" />
+        </resourceSet>
+        <resourceSet name="ExtJsVbdScript" type="js" >
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/CustomDatePicker.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/CustomDateField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/SearchField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/portal/classes.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+        </resourceSet>
+        <resourceSet name="ExtJsScript" type="js" >
+            <resource path="~/cdn/ExtJS/4.2.1/ext-all.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ext-fix.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/ext-theme-neptune.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/locale/ext-lang-vn.js" />
+            <resource reference="ExtJsUxScript" />
+            <resource reference="ExtJsVbdScript" />
+        </resourceSet>
+
+        <!--Extjs 5-->
+        <!--Extjs 5 Default Theme-->
+        <resourceSet name="ExtJs5StyleCSS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/sencha-charts/build/neptune/resources/sencha-charts-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/neptune/resources/ext-ux-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/ext-tab-navigation.css" />
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5StyleJS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-crisp/build/ext-theme-crisp.js" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5Style" type="css" >
+            <resource reference="ExtJs5StyleCSS" />
+        </resourceSet>
+        <!--End Extjs 5 Default Theme-->
+
+        <!--Extjs 5 Orange Theme-->
+        <resourceSet name="ExtJs5ThemeOrangeCSS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-lightblue/build/resources/ext-theme-lightblue-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/sencha-charts/build/neptune/resources/sencha-charts-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/neptune/resources/ext-ux-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/ext-tab-navigation.css" />
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5ThemeOrangeJS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-lightblue/build/ext-theme-lightblue.js" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5ThemeOrangeStyle" type="css" >
+            <resource reference="ExtJs5ThemeOrangeCSS" />
+        </resourceSet>
+        <!--End Extjs 5 Orange Theme-->
+
+        <!--Extjs 5 LightBlue Theme-->
+        <resourceSet name="ExtJs5ThemeLightBlueCSS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-lightblue/build/resources/ext-theme-lightblue-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/sencha-charts/build/neptune/resources/sencha-charts-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/neptune/resources/ext-ux-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/ext-tab-navigation.css" />
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5ThemeLightBlueJS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-lightblue/build/ext-theme-lightblue.js" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5ThemeLightBlueStyle" type="css" >
+            <resource reference="ExtJs5ThemeLightBlueCSS" />
+        </resourceSet>
+        <!--End Extjs 5 LightBlue Theme-->
+
+
+        <!--Extjs 5 DarkBlue Theme-->
+        <resourceSet name="ExtJs5ThemeDarkBlueCSS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-darkblue/build/resources/ext-theme-darkblue-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/sencha-charts/build/neptune/resources/sencha-charts-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/neptune/resources/ext-ux-all.css" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-ux/build/ext-tab-navigation.css" />
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5ThemeDarkBlueJS" type="css" >
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-darkblue/build/ext-theme-darkblue.js" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5ThemeDarkBlueStyle" type="css" >
+            <resource reference="ExtJs5ThemeDarkBlueCSS" />
+        </resourceSet>
+        <!--End Extjs 5 DarkBlue Theme-->
+
+        <resourceSet name="ExtJs5UxScript" type="js" >
+            <resource path="~/cdn/ExtJS/5.1.2/packages/ext-ux/build/ext-ux.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/form/Ext.form.field.TinyMCE.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/form/Ext.form.field.CodeMirror.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/CustomDatePicker.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/CustomDateField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/ClearButton/ClearButton.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/form/SearchField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/statusbar/StatusBar.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/colorpicker/ColorPicker.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/colorpicker/ColorPickerField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/GridValidator.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/form/MultiSelect.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/form/CheckboxListCombo.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/form/ItemSelector.js" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs5Script" type="js" >
+            <resource path="~/cdn/extjs/5.1.2/ext-all.js" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-theme-crisp/build/ext-theme-crisp.js" />
+            <resource path="~/cdn/extjs/5.1.2/packages/ext-locale/build/ext-locale-vn.js" />
+            <resource path="~/cdn/extjs/5.1.2/packages/sencha-charts/build/sencha-charts.js" />
+            <resource reference="ExtJs5UxScript" />
+        </resourceSet>
+        <!--/Extjs5-->
+
+        <!--Extjs 6-->
+        <resourceSet name="ExtJs6UxScript" type="js" >
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/ux.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/form/Ext.form.field.TinyMCE.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/form/Ext.form.field.CodeMirror.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/CustomDatePicker.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/CustomDateField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/ColorPicker.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/ColorPickerField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/GridValidator.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/form/CheckboxListCombo.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/GroupingCombobox.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/GroupingTagField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/form/SearchField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/SearchField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/grid/Printer.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/PreviewPlugin.js" />
+            <resource path="~/cdn/ChartRender/Chart/ux/vdmscharts.js" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6Script" type="js" >
+            <resource path="~/cdn/extjs/6.2.0/ext-all.js" />
+            <resource path="~/cdn/extjs/6.2.0/classic/locale/locale-vn.js" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/charts.js" />
+            <resource reference="ExtJs6UxScript" />
+        </resourceSet>
+
+        <!--Extjs 6 Neptune Theme-->
+        <resourceSet name="ExtJs6ThemeNeptuneCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-neptune/resources/theme-neptune-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/neptune/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/neptune/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeneptuneJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-neptune/theme-neptune.js" />
+        </resourceSet>
+        <!--/Extjs 6 Neptune Theme-->
+
+        <!--Extjs 6 Crisp Theme-->
+        <resourceSet name="ExtJs6ThemeCrispCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-crisp-vdms/resources/theme-crisp-vdms-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/crisp/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/crisp/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeCrispJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-crisp-vdms/theme-crisp-vdms.js" />
+        </resourceSet>
+        <!--/Extjs 6 Crisp Theme-->
+
+        <!--Extjs 6 Triton Theme-->
+        <resourceSet name="ExtJs6ThemeTritonCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-triton-vdms/resources/theme-triton-vdms-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/triton/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/triton/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeTritonJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-triton-vdms/theme-triton-vdms.js" />
+        </resourceSet>
+        <!--/Extjs 6 Triton Theme-->
+
+        <!--Extjs 6 DodgeBlue Theme-->
+        <resourceSet name="ExtJs6ThemeDodgeBlueCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-classic-dodgeblue/resources/theme-classic-dodgeblue-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/triton/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/triton/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeDodgeBlueJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-classic-dodgeblue/theme-classic-dodgeblue.js" />
+        </resourceSet>
+        <!--End Extjs 6 DodgeBlue Theme-->
+
+        <!--Extjs 6 AllPorts Theme-->
+        <resourceSet name="ExtJs6ThemeAllPortsCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-classic-allports/resources/theme-classic-allports-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/triton/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/triton/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeAllPortsJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-classic-allports/theme-classic-allports.js" />
+        </resourceSet>
+        <!--End Extjs 6 DodgeBlue Theme-->
+
+        <!--Extjs 6 Red Theme-->
+        <resourceSet name="ExtJs6ThemeRedCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-classic-red/resources/theme-classic-red-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/triton/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/triton/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeRedJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-classic-red/theme-classic-red.js" />
+        </resourceSet>
+        <!--End Extjs 6 Red Theme-->
+
+        <!--Extjs 6 Green Theme-->
+        <resourceSet name="ExtJs6ThemeGreenCSS" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/classic/theme-classic-green/resources/theme-classic-green-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/charts/classic/triton/resources/charts-all.css" />
+            <resource path="~/cdn/extjs/6.2.0/packages/ux/classic/triton/resources/ux-all.css" />
+            <resource path="~/cdn/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/colorpicker/css/colorpicker.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/ClearButton/ClearButton.css" />
+        </resourceSet>
+
+        <resourceSet name="ExtJs6ThemeGreenJS" type="js" >
+            <resource path="~/cdn/ExtJS/6.2.0/classic/theme-classic-green/theme-classic-green.js" />
+        </resourceSet>
+        <!--End Extjs 6 Green Theme-->
+        <!--/Extjs 6-->
+
+        <resourceSet name="DocumentExt6Style" type="css" >
+            <resource path="~/App/Document/style/main.extjs6.css" />
+        </resourceSet>
+
+        <!-- COMMON -->
+        <resourceSet name="CommonStyle" type="css" >
+            <resource path="~/cdn/icons/styles/vdms.min.css" />
+            <resource path="~/cdn/vdms/main.min.css" />
+            <resource path="~/cdn/Libs/codemirror/lib/codemirror.css" />
+            <resource path="~/cdn/Libs/uploadify/uploadify.css" />
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+            <resource path="~/cdn/Libs/video-js/7.0.5/video-js.css" />
+            <resource path="~/cdn/Libs/iViewer/jquery.iviewer.css" />
+            <resource path="~/cdn/Libs/pannellum/pannellum.css" />
+            <resource path="~/cdn/Libs/dropzone/dropzone.css" />
+        </resourceSet>
+
+        <resourceSet name="SignalRScript" type="js" >
+            <resource path="~/cdn/Libs/signalR/jquery.signalR-2.2.0.min.js" />
+            <resource path="~/App/Shared/app/vdms.hubs.js" />
+        </resourceSet>
+
+        <resourceSet name="CommonScript" type="js" >
+            <resource path="~/cdn/Libs/Lang.js" />
+            <resource path="~/cdn/icons/font-awesome-icons.js" />
+            <resource path="~/cdn/Libs/jquery.js" />
+            <resource path="~/cdn/Libs/jqueryui.js" />
+            <resource path="~/cdn/Libs/jquery.mousewheel.min.js" />
+            <resource path="~/cdn/Libs/codemirror/lib/codemirror.js" />
+            <resource path="~/cdn/Libs/codemirror/mode/javascript/javascript.js" />
+            <resource path="~/cdn/Libs/codemirror/mode/sql/sql-formatter.min.js" />
+            <resource path="~/cdn/Libs/codemirror/mode/sql/sql.js" />
+            <resource path="~/cdn/Libs/jsbeautify.js" />
+            <resource path="~/cdn/Libs/swfobject.js" />
+            <resource path="~/cdn/Libs/uploadify/jquery.uploadify.v2.1.4.min.js" />
+            <resource path="~/cdn/Libs/tiny_mce/tiny_mce.js" />
+            <resource path="~/cdn/Libs/javascript.util.js" />
+            <resource path="~/cdn/Libs/iViewer/jquery.iviewer.min.js" />
+            <resource path="~/cdn/Libs/pannellum/pannellum.js" />
+            <resource path="~/cdn/Libs/jsts.js" />
+            <resource path="~/cdn/Libs/video-js/7.0.5/video.js" />
+
+            <resource path="~/cdn/Libs/dropzone/dropzone.js" />
+            <resource path="~/cdn/Libs/canvg/rgbcolor.js" />
+            <resource path="~/cdn/Libs/canvg/StackBlur.js" />
+            <resource path="~/cdn/Libs/canvg/canvg.js" />
+            <resource path="~/App/Shared/app/vdms.lang.js" />
+        </resourceSet>
+
+        <!-- CUSTOMIZE THIS DEPEND ON PROJECT -->
+        <resourceSet name="GlobalExtJs6Theme" type="css" debugEnabled="true">
+            <resource reference="ExtJs6ThemeVDMS5CSS" />
+            <resource reference="DocumentExt6Style" />
+            <resource reference="CommonStyle" />
+        </resourceSet>
+        <resourceSet name="GlobalExtJs6Script" type="js" debugEnabled="true">
+            <resource reference="ExtJs6Script" />
+            <resource reference="ExtJs6ThemeVDMS5JS" />
+            <resource reference="CommonScript" />
+        </resourceSet>
+
+        <!-- Component -->
+        <resourceSet name="AjaxProxyComponent" type="js" >
+            <resource path="~/App/Shared/store/AjaxProReader.js" />
+            <resource path="~/App/Shared/store/AjaxProTreeReader.js" />
+            <resource path="~/App/Shared/store/AjaxProStore.js" />
+            <resource path="~/App/Shared/store/AjaxProTreeStore.js" />
+        </resourceSet>
+
+        <!-- Leaflet -->
+        <resourceSet name="LeafletStyle" type="css" >
+            <resource path="~/cdn/libs/leaflet-0.7.1/leaflet.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.MagnifyingGlass/leaflet.magnifyingglass.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Coordinates/Leaflet.Coordinates-0.1.4.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Coordinates/Leaflet.Coordinates-0.1.4.ie.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.contextmenu/leaflet.contextmenu.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Draw/leaflet.draw.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.MeasureControl/leaflet.measurecontrol.css" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Orderlayers/css/leaflet.control.orderlayers.min.css" />
+        </resourceSet>
+        <resourceSet name="LeafletScript" type="js" >
+            <resource path="~/cdn/libs/leaflet-0.7.1/leaflet.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Draw/leaflet.draw.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.MeasureControl/leaflet.measurecontrol.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.contextmenu/leaflet.contextmenu.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Coordinates/Leaflet.Coordinates-0.1.4.min.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.MagnifyingGlass/leaflet.magnifyingglass.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Draw/leaflet.draw.vi.js" />
+            <resource path="~/cdn/libs/leaflet-0.7.1/plugins/Leaflet.Orderlayers/leaflet.control.orderlayers.min.js" />
+        </resourceSet>
+
+        <!-- VBDMAPAPI -->
+        <resourceSet name="VbdMapApiStyle" type="css" >
+
+        </resourceSet>
+        <resourceSet name="VbdMapApiScript" type="js" >
+            <resource path="~/cdn/API/VBDMapAPI.js"/>
+            <resource path="~/cdn/API/ContextMenu.js" />
+            <resource path="~/cdn/API/VBDMapAPI.GeoJSON2.js" />
+        </resourceSet>
+
+        <!--An Tùng: API mới-->
+        <resourceSet name="VbdMapApiNewScript" type="js" >
+            <resource path="~/cdn/Libs/javascript.util.js" />
+            <resource path="~/cdn/Libs/jsts.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1/vietbandomapsapi.js"/>
+            <resource path="~/cdn/vietbandomapapi/plugins/LayerCluster.js"/>
+            <resource path="~/cdn/vietbandomapapi/2.0.1/ContextMenu.js" />
+            <resource path="~/cdn/API/VBDMapMultilObject.js" />
+        </resourceSet>
+
+        <!-- Noty -->
+        <resourceSet name="NotyScript" type="js" >
+            <resource path="~/cdn/Libs/noty/jquery.noty.js" />
+            <resource path="~/cdn/Libs/noty/layouts/bottom.js" />
+            <resource path="~/cdn/Libs/noty/layouts/bottomCenter.js" />
+            <resource path="~/cdn/Libs/noty/layouts/bottomLeft.js" />
+            <resource path="~/cdn/Libs/noty/layouts/bottomRight.js" />
+            <resource path="~/cdn/Libs/noty/layouts/center.js" />
+            <resource path="~/cdn/Libs/noty/layouts/centerLeft.js" />
+            <resource path="~/cdn/Libs/noty/layouts/centerRight.js" />
+            <resource path="~/cdn/Libs/noty/layouts/inline.js" />
+            <resource path="~/cdn/Libs/noty/layouts/top.js" />
+            <resource path="~/cdn/Libs/noty/layouts/topCenter.js" />
+            <resource path="~/cdn/Libs/noty/layouts/topLeft.js" />
+            <resource path="~/cdn/Libs/noty/layouts/topRight.js" />
+            <resource path="~/cdn/Libs/noty/themes/default.js" />
+        </resourceSet>
+
+        <!--Map-->
+        <resourceSet name="MapStyle" type="css" >
+            <resource path="~/cdn/ExtJS/5.1.2//ux/vbd/css/MapField.css" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Css/drawtool.css" />
+        </resourceSet>
+        <resourceSet name="MapScript" type="js" >
+            <resource path="~/cdn/Libs/javascript.util.js" />
+            <resource path="~/cdn/Libs/jsts.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1/vietbandomapsapi.js"/>
+            <resource path="~/cdn/API/VBDMapAPI.js"/>
+            <resource path="~/cdn/API/VBDMapAPI.GeoJSON.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1//ContextMenu.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+        </resourceSet>
+
+        <resourceSet name="MapEditorStyle" type="css">
+            <resource path="~/App/Shared/mapeditortool/style/mapeditor.css" />
+        </resourceSet>
+        <resourceSet name="MapEditorScript" type="js" debugEnabled="false">
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Buffer.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Draw.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Editting.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Leagen.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Snap.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/SnapLayer.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/CtrDraw.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/View/MapEditorComponent.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Controller/MapEditorComponent.js" />
+
+            <resource path="~/App/Shared/mapeditortool/view/MapEditorTool.js" />
+            <resource path="~/App/Shared/mapeditortool/controller/MapEditorTool.js" />
+            <resource path="~/App/Shared/mapeditortool/MapEditor.Utils.js" />
+        </resourceSet>
+
+        <!-- ADMIN -->
+        <!-- Admin common -->
+        <resourceSet name="AdminScript" type="js" >
+            <resource reference="CommonScript" />
+        </resourceSet>
+
+        <!-- Admin Layer -->
+        <resourceSet name="AdminLayerStyle" type="css" >
+            <resource path="~/App/Admin/Layer/style/icon.css" />
+            <resource path="~/App/Admin/Layer/style/main.css" />
+        </resourceSet>
+        <resourceSet name="AdminLayerApp" type="js" >
+            <resource reference="AjaxProxyComponent"/>
+            <resource path="~/App/Admin/Layer/app/global.js" />
+
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/view/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/controller/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/LayerStylePanel.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerStylePanel.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/LayerDetailPanel.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerDetailPanel.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/TemplateDetailPanel.js" />
+            <resource path="~/App/Admin/Layer/app/controller/TemplateDetailPanel.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/LayerTemplate.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerTemplate.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/LayerConstraint.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerConstraint.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/LayerConstraintPanel.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerConstraintPanel.js" />
+
+
+            <resource path="~/App/Admin/Layer/app/view/LayerWorkflow.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerWorkflow.js" />
+            <resource path="~/App/Document/app/File/view/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/view/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/controller/ContentWindow.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+
+            <resource path="~/App/Admin/Layer/app/view/LayerWorkflow.js" />
+            <resource path="~/App/Admin/Layer/app/controller/LayerWorkflow.js" />
+
+            <resource path="~/App/Shared/app/view/WorkflowPanel.js" />
+            <resource path="~/App/Shared/app/controller/WorkflowPanel.js" />
+
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/app/view/ViewQueryComponent.js" />
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/TreeLayer.js" />
+            <resource path="~/App/Admin/Layer/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/CollectionConfig.js" />
+            <resource path="~/App/Admin/Layer/app/controller/CollectionConfig.js" />
+
+            <resource path="~/App/Admin/Layer/app/view/MapConfig.js" />
+            <resource path="~/App/Admin/Layer/app/controller/MapConfig.js" />
+
+            <resource path="~/App/Admin/Layer/app/app.js" />
+        </resourceSet>
+
+        <!-- Admin Map Layer -->
+        <resourceSet name="AdminMapLayersStyle" type="css" >
+            <resource path="~/App/Admin/Role/style/main.css" />
+            <resource path="~/App/Admin/MapLayers/style/icon.css" />
+            <resource path="~/App/Admin/MapLayers/style/main.css" />
+        </resourceSet>
+        <resourceSet name="AdminMapLayersApp" type="js" >
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+            <resource path="~/App/Document/app/view/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/controller/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+            <resource path="~/App/Admin/MapLayers/app/view/GroupWindow.js" />
+            <resource path="~/App/Admin/MapLayers/app/controller/GroupWindow.js" />
+            <resource path="~/App/Admin/MapLayers/app/view/SecurityWindow.js" />
+            <resource path="~/App/Admin/MapLayers/app/controller/SecurityWindow.js" />
+            <resource path="~/App/Admin/MapLayers/app/view/MapLayerForm.js" />
+            <resource path="~/App/Admin/MapLayers/app/controller/MapLayerForm.js" />
+            <resource path="~/App/Admin/MapLayers/app/view/ShareMapnikForm.js" />
+            <resource path="~/App/Admin/MapLayers/app/controller/ShareMapnikForm.js" />
+            <resource path="~/App/Admin/MapLayers/app/view/TreeMenu.js" />
+            <resource path="~/App/Admin/MapLayers/app/controller/TreeMenu.js" />
+            <resource path="~/App/Admin/MapLayers/app/view/CenterPanel.js" />
+            <resource path="~/App/Admin/MapLayers/app/controller/CenterPanel.js" />
+            <resource path="~/App/Admin/MapLayers/app/app.js" />
+        </resourceSet>
+
+        <!-- Admin Resource Monitor -->
+        <resourceSet name="AdminResourceMonitorStyle" type="css" >
+            <resource path="~/cdn/icons/styles/vdms.min.css" />
+
+        </resourceSet>
+        <resourceSet name="AdminResourceMonitorApp" type="js" >
+            <resource path="~/App/Admin/ResourceMonitor/app/global.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/view/GridLayer.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/controller/GridLayer.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/view/ResourceStatus.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/controller/ResourceStatus.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/view/CenterPanel.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/controller/CenterPanel.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/view/Viewport.js" />
+            <resource path="~/App/Admin/ResourceMonitor/app/app.js" />
+        </resourceSet>
+
+        <!-- Admin Role -->
+        <resourceSet name="AdminRoleStyle" type="css" >
+            <resource path="~/App/Admin/Role/style/icon.css" />
+            <resource path="~/App/Admin/Role/style/main.css" />
+        </resourceSet>
+        <resourceSet name="AdminRoleApp" type="js" >
+            <resource reference="AjaxProxyComponent"/>
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapField.js" />
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/view/BindingForm.js" />
+            <resource path="~/App/Shared/app/controller/BindingForm.js" />
+            <resource path="~/App/Document/app/File/view/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/controller/DynamicForm.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/global.js" />
+            <resource path="~/App/Document/app/File/view/FileReviewWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileReviewWindow.js" />
+            <resource path="~/App/Admin/Role/app/view/OUTree.js" />
+            <resource path="~/App/Admin/Role/app/controller/OUTree.js" />
+            <resource path="~/App/Admin/Role/app/view/PrincipalGrid.js" />
+            <resource path="~/App/Admin/Role/app/controller/PrincipalGrid.js" />
+            <resource path="~/App/Admin/Role/app/view/GroupInfoWindow.js" />
+            <resource path="~/App/Admin/Role/app/view/UserInfoWindow.js" />
+            <resource path="~/App/Document/app/File/view/FileWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileWindow.js" />
+            <resource path="~/App/Document/app/File/view/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/view/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/controller/ContentWindow.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+
+            <resource path="~/App/Admin/Role/app/view/AgentDeviceManager.js" />
+            <resource path="~/App/Admin/Role/app/controller/AgentDeviceManager.js" />
+
+            <resource path="~/App/Admin/Role/app/app.js" />
+        </resourceSet>
+
+        <!-- Admin Template Link -->
+        <resourceSet name="AdminTemplateLinkStyle" type="css" >
+            <resource path="~/App/Admin/TemplateLink/style/icon.css" />
+            <resource path="~/App/Admin/TemplateLink/style/main.css" />
+        </resourceSet>
+        <resourceSet name="AdminTemplateLinkApp" type="js" >
+            <resource path="~/App/Admin/TemplateLink/app/view/LinkGrid.js" />
+            <resource path="~/App/Admin/TemplateLink/app/controller/LinkGrid.js" />
+            <resource path="~/App/Admin/TemplateLink/app/view/CenterPanel.js" />
+            <resource path="~/App/Admin/TemplateLink/app/controller/CenterPanel.js" />
+            <resource path="~/App/Admin/TemplateLink/app/app.js" />
+        </resourceSet>
+
+        <!-- Admin Import -->
+        <resourceSet name="AdminImportStyle" type="css" >
+            <resource reference="CommonStyle"/>
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+        </resourceSet>
+        <resourceSet name="AdminImportApp" type="js" >
+            <resource path="~/cdn/Libs/Lang.js" />
+            <resource path="~/cdn/icons/font-awesome-icons.js" />
+            <resource reference="CommonScript" />
+            <resource reference="AjaxProxyComponent"/>
+
+            <resource path="~/App/Import/app/global.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Import/app/view/GridLayer.js" />
+            <resource path="~/App/Import/app/controller/GridLayer.js" />
+            <resource path="~/App/Import/app/app.js" />
+        </resourceSet>
+
+        <!-- Admin Import Layer-->
+        <resourceSet name="AdminImportLayerApp" type="js" >
+            <resource path="~/cdn/Libs/Lang.js" />
+            <resource path="~/cdn/icons/font-awesome-icons.js" />
+            <resource reference="CommonScript" />
+            <resource reference="AjaxProxyComponent"/>
+
+            <resource path="~/App/Import/app/global.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Import/app/view/GridLayer.js" />
+            <resource path="~/App/Import/app/controller/GridLayer.js" />
+            <resource path="~/App/Import/app/view/CreateFolder.js" />
+            <resource path="~/App/Import/app/controller/CreateFolder.js" />
+            <resource path="~/App/Import/app/view/GridDataImport.js" />
+            <resource path="~/App/Import/app/controller/GridDataImport.js" />
+            <resource path="~/App/Import/app/view/GridImportFiles.js" />
+            <resource path="~/App/Import/app/controller/GridImportFiles.js" />
+            <resource path="~/App/Import/app/view/ImportWindow.js" />
+            <resource path="~/App/Import/app/controller/ImportWindow.js" />
+            <resource path="~/App/Import/app/view/SettingImport.js" />
+            <resource path="~/App/Import/app/controller/SettingImport.js" />
+            <resource path="~/App/Import/app/layer.js" />
+        </resourceSet>
+
+        <!--Admin Feature-->
+        <resourceSet name="AdminFeatureStyle" type="css" >
+            <resource path="~/App/Admin/Feature/styles/feature.css" />
+            <resource path="~/App/Admin/Role/style/icon.css" />
+            <resource path="~/App/Admin/Role/style/main.css" />
+        </resourceSet>
+
+        <resourceSet name="AdminFeatureApp" type="js" >
+            <resource reference="AjaxProxyComponent"/>
+            <resource reference="MapScript" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Admin/Feature/app/global.js" />
+            <resource path="~/App/Admin/Feature/app/common/view/Navigation.js" />
+            <resource path="~/App/Admin/Feature/app/common/controller/Navigation.js" />
+
+            <resource path="~/App/Document/app/Navigator/view/BreadcrumbGroupButton.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+            <resource path="~/App/Document/app/view/UserProfile.js" />
+            <resource path="~/App/Document/app/view/UserPassword.js" />
+            <resource path="~/App/Document/app/controller/UserProfile.js" />
+            <resource path="~/App/Document/app/controller/UserPassword.js" />
+
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+
+            <resource path="~/App/Admin/Role/app/view/PrincipalGrid.js" />
+            <resource path="~/App/Admin/Role/app/controller/PrincipalGrid.js" />
+            <resource path="~/App/Admin/Role/app/view/GroupInfoWindow.js" />
+            <resource path="~/App/Admin/Role/app/view/UserInfoWindow.js" />
+            <resource path="~/App/Admin/Role/app/controller/UserInfoWindow.js" />
+
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/app/view/ViewQueryComponent.js" />
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Document/app/File/view/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/view/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/controller/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/view/CreateMultiFolder.js" />
+            <resource path="~/App/Document/app/File/controller/CreateMultiFolder.js" />
+
+            <resource path="~/App/Document/app/Space/view/DetailView.js" />
+            <resource path="~/App/Document/app/Space/controller/DetailView.js" />
+
+            <resource path="~/App/Admin/Feature/app/view/Viewport.js" />
+            <resource path="~/App/Admin/Feature/app/controller/Viewport.js" />
+
+            <resource path="~/App/Admin/Feature/app/view/FeatureManager.js" />
+            <resource path="~/App/Admin/Feature/app/controller/FeatureManager.js" />
+
+            <resource path="~/App/Admin/Feature/app/feature.js" />
+        </resourceSet>
+        <!-- /ADMIN -->
+
+        <!-- REPORT -->
+        <resourceSet name="ReportBuilderStyle" type="css" >
+            <resource path="~/App/ReportBuilder/style/main.css" />
+            <resource path="~/App/ReportBuilder/style/icon.css" />
+            <resource path="~/App/ReportBuilder/style/map.css" />
+        </resourceSet>
+        <resourceSet name="ReportBuilderScript" type="js" >
+            <resource reference="VbdMapApiNewScript" />
+            <resource reference="VbdMapApiScript" />
+        </resourceSet>
+        <resourceSet name="ReportBuilderApp" type="js" >
+            <resource path="~/App/ReportBuilder/app/global.js" />
+
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/global.js" />
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+
+            <resource path="~/App/ReportBuilder/app/view/CenterPanel.js" />
+            <resource path="~/App/ReportBuilder/app/view/NorthPanel.js" />
+            <resource path="~/App/ReportBuilder/app/view/ViewPort.js" />
+            <resource path="~/App/ReportBuilder/app/view/ChartChooser.js" />
+            <resource path="~/App/ReportBuilder/app/view/LayerTree.js" />
+            <resource path="~/App/ReportBuilder/app/view/SingleLayerTree.js" />
+            <resource path="~/App/ReportBuilder/app/view/QueryGrid.js" />
+            <resource path="~/App/ReportBuilder/app/view/JoinField.js" />
+            <resource path="~/App/ReportBuilder/app/view/TreeTable.js" />
+            <resource path="~/App/ReportBuilder/app/view/PropertyFilter.js" />
+            <resource path="~/App/ReportBuilder/app/view/RelationshipsView.js" />
+            <resource path="~/App/ReportBuilder/app/view/QueryBuilderPanel.js" />
+            <resource path="~/App/ReportBuilder/app/view/FieldsGrid.js" />
+            <resource path="~/App/ReportBuilder/app/view/FilterGrid.js" />
+            <resource path="~/App/ReportBuilder/app/view/SqlEditor.js" />
+            <resource path="~/App/ReportBuilder/app/view/GeoChooser.js" />
+            <resource path="~/App/ReportBuilder/app/view/ChartBuilder.js" />
+
+            <resource path="~/App/ReportBuilder/app/controller/CenterPanel.js" />
+            <resource path="~/App/ReportBuilder/app/controller/ChartChooser.js" />
+            <resource path="~/App/ReportBuilder/app/controller/LayerTree.js" />
+            <resource path="~/App/ReportBuilder/app/controller/SingleLayerTree.js" />
+            <resource path="~/App/ReportBuilder/app/controller/QueryGrid.js" />
+            <resource path="~/App/ReportBuilder/app/controller/JoinField.js" />
+            <resource path="~/App/ReportBuilder/app/controller/PropertyFilter.js" />
+            <resource path="~/App/ReportBuilder/app/controller/TreeTable.js" />
+            <resource path="~/App/ReportBuilder/app/controller/RelationshipsView.js" />
+            <resource path="~/App/ReportBuilder/app/controller/QueryBuilderPanel.js" />
+            <resource path="~/App/ReportBuilder/app/controller/FieldsGrid.js" />
+            <resource path="~/App/ReportBuilder/app/controller/FilterGrid.js" />
+            <resource path="~/App/ReportBuilder/app/controller/SqlEditor.js" />
+            <resource path="~/App/ReportBuilder/app/controller/GeoChooser.js" />
+            <resource path="~/App/ReportBuilder/app/controller/ChartBuilder.js" />
+            <resource path="~/App/ReportBuilder/app/app.js" />
+        </resourceSet>
+        <!-- /REPORT -->
+
+        <!-- REPORT-VIEWER -->
+        <resourceSet name="ReportViewerStyle" type="css" >
+            <resource path="~/App/ReportBuilder/style/main.css" />
+            <resource path="~/App/ReportBuilder/style/icon.css" />
+            <resource path="~/App/ReportBuilder/style/map.css" />
+        </resourceSet>
+        <resourceSet name="ReportViewerScript" type="js" >
+            <resource reference="CommonScript"/>
+            <resource reference="ExtJs6Script"/>
+            <resource reference="VbdMapApiNewScript" />
+            <resource reference="VbdMapApiScript" />
+            <resource reference="AjaxProxyComponent" />
+        </resourceSet>
+        <resourceSet name="ReportViewerApp" type="js" >
+            <resource path="~/cdn/ChartRender/Chart/ux/vdmscharts.js" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/global.js" />
+
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource path="~/App/Document/app/view/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderView.js" />
+
+            <resource path="~/App/ReportBuilder/app/view/GeoChooser.js" />
+            <resource path="~/App/ReportBuilder/app/controller/GeoChooser.js" />
+
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/app/view/ViewQueryComponent.js" />
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+
+            <resource path="~/App/ReportViewer/app/view/Viewport.js" />
+            <resource path="~/App/ReportViewer/app/controller/Viewport.js" />
+
+            <resource path="~/App/ReportViewer/app/view/WestPanel.js" />
+            <resource path="~/App/ReportViewer/app/controller/WestPanel.js" />
+
+            <resource path="~/App/Document/app/view/ReportView.js" />
+            <resource path="~/App/Document/app/controller/ReportView.js" />
+            <resource path="~/App/Document/app/view/ReportBuilderViewer.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderViewer.js" />
+
+            <resource path="~/App/Document/app/ReportViewUtils.js" />
+
+            <resource path="~/App/ReportViewer/app/app.js" />
+        </resourceSet>
+        <!-- /REPORT-VIEWER -->
+
+        <!-- FORMBUILDER -->
+        <resourceSet name="FormBuilderStyle" type="css" >
+            <resource reference="CommonStyle" />
+            <resource path="~/App/FormBuilder/style/icon.css" />
+            <resource path="~/App/FormBuilder/style/main.css" />
+            <resource path="~/App/Document/style/map.css" />
+            <resource reference="ExtJs5Style" />
+        </resourceSet>
+        <resourceSet name="FormBuilderScript" type="js" >
+            <resource reference="CommonScript" />
+            <resource reference="VbdMapApiScript" />
+            <resource reference="ExtJs5Script" />
+            <resource reference="AjaxProxyComponent" />
+        </resourceSet>
+        <resourceSet name="FormBuilderApp" type="js" >
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapSearchField.js" />
+
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Shared/app/view/BindingForm.js" />
+            <resource path="~/App/Shared/app/controller/BindingForm.js" />
+            <resource path="~/App/Document/app/File/view/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/controller/DynamicForm.js" />
+
+            <resource path="~/App/FormBuilder/app/components.js" />
+            <resource path="~/App/FormBuilder/app/properties.js" />
+
+            <resource path="~/App/FormBuilder/app/store/ComponentStore.js" />
+
+            <resource path="~/App/FormBuilder/app/view/ComponentLayer.js" />
+            <resource path="~/App/FormBuilder/app/controller/ComponentLayer.js" />
+            <resource path="~/App/FormBuilder/app/view/ComponentManager.js" />
+            <resource path="~/App/FormBuilder/app/controller/ComponentManager.js" />
+            <resource path="~/App/FormBuilder/app/view/ComponentProperty.js" />
+            <resource path="~/App/FormBuilder/app/controller/ComponentProperty.js" />
+            <resource path="~/App/FormBuilder/app/view/ComponentRender.js" />
+            <resource path="~/App/FormBuilder/app/controller/ComponentRender.js" />
+            <resource path="~/App/FormBuilder/app/view/ComponentTree.js" />
+            <resource path="~/App/FormBuilder/app/controller/ComponentTree.js" />
+            <resource path="~/App/FormBuilder/app/view/FormManager.js" />
+            <resource path="~/App/FormBuilder/app/controller/FormManager.js" />
+            <resource path="~/App/FormBuilder/app/view/ComponentBuilder.js" />
+            <resource path="~/App/FormBuilder/app/controller/ComponentBuilder.js" />
+            <resource path="~/App/FormBuilder/app/view/Viewport.js" />
+            <resource path="~/App/FormBuilder/app/controller/Viewport.js" />
+
+            <resource path="~/App/FormBuilder/app/app.js" />
+        </resourceSet>
+        <!-- /FORMBUILDER -->
+
+        <!-- FORMINPUT -->
+        <resourceSet name="FormInputStyle" type="css" >
+            <resource reference="CommonStyle" />
+            <resource path="~/App/FormInput/style/main.css" />
+            <resource path="~/App/Document/style/map.css" />
+            <resource reference="ExtJs5Style" />
+        </resourceSet>
+        <resourceSet name="FormInputScript" type="js" >
+            <resource reference="CommonScript" />
+            <resource reference="VbdMapApiScript" />
+            <resource reference="ExtJs5Script" />
+            <resource reference="AjaxProxyComponent" />
+        </resourceSet>
+        <resourceSet name="FormInputApp" type="js" >
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+
+            <resource path="~/App/Shared/app/view/BindingForm.js" />
+            <resource path="~/App/Shared/app/controller/BindingForm.js" />
+
+            <resource path="~/App/Document/app/File/view/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/controller/DynamicForm.js" />
+
+            <resource path="~/App/FormInput/app/global.js" />
+            <resource path="~/App/FormInput/app/app.js" />
+        </resourceSet>
+        <!-- /FORMINPUT -->
+
+        <!-- PUBLIC -->
+        <resourceSet name="PublicStyle" type="css" >
+            <resource reference="CommonStyle" />
+            <resource reference="GlobalExtJs6Theme" />
+            <resource path="~/App/Document/style/map.css" />
+            <resource path="~/App/Public/style/main.css" />
+            <resource path="~/App/Shared/mapeditortool/style/mapeditor.css" />
+        </resourceSet>
+        <resourceSet name="PublicScript" type="js" debugEnabled="false">
+            <resource reference="GlobalExtJs6Script" />
+        </resourceSet>
+        <resourceSet name="PublicApp" type="js"  debugEnabled="true">
+            <resource reference="VbdMapApiNewScript" />
+            <resource path="~/App/Document/app/view/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderView.js" />
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Public/app/global.js" />
+
+            <resource path="~/App/Public/app/view/LayerSwitcher.js" />
+            <resource path="~/App/Public/app/controller/LayerSwitcher.js" />
+
+            <resource reference="MapEditorScript" />
+
+            <resource path="~/App/Public/app/app.js" />
+        </resourceSet>
+        <!-- /PUBLIC -->
+
+        <!-- DOCUMENT -->
+        <resourceSet name="PdfReviewStyle" type="css" >
+            <resource path="~/App/Shared/xpdf/styles/style.css" />
+        </resourceSet>
+        <!-- Document Common -->
+        <resourceSet name="DocumentStyle" type="css" >
+            <resource path="~/App/Document/style/main.css" />
+            <resource path="~/App/Document/style/map.css" />
+            <resource reference="CommonStyle"/>
+            <resource reference="PdfReviewStyle"/>
+
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/DrawTool/Css/drawtool.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/css/MapField.css" />
+        </resourceSet>
+
+        <resourceSet name="DocumentScript" type="js" >
+            <resource reference="VbdMapApiScript" />
+            <resource reference="CommonScript"/>
+            <resource reference="NotyScript" />
+            <resource reference="SignalRScript" />
+            <resource reference="VbdMapApiNewScript" />
+            <!--<<== An Tung: Resource cho API mới-->
+
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+        </resourceSet>
+
+        <!-- Document Component -->
+        <resourceSet name="PdfReviewScript" type="js" >
+            <resource path="~/App/Shared/xpdf/utils.js" />
+            <resource path="~/App/Shared/xpdf/view/PdfPageEditor.js" />
+            <resource path="~/App/Shared/xpdf/controller/PdfPageEditor.js" />
+            <resource path="~/App/Shared/xpdf/view/PdfPageReview.js" />
+            <resource path="~/App/Shared/xpdf/controller/PdfPageReview.js" />
+            <resource path="~/App/Shared/xpdf/view/PdfReviewViewer.js" />
+            <resource path="~/App/Shared/xpdf/controller/PdfReviewViewer.js" />
+            <resource path="~/App/Shared/xpdf/view/PdfReviewIndex.js" />
+            <resource path="~/App/Shared/xpdf/controller/PdfReviewIndex.js" />
+        </resourceSet>
+        <resourceSet name="QueryViewerComponent" type="js" >
+            <resource path="~/App/Shared/app/VbdCheckColumn.js" />
+            <resource path="~/App/Document/app/File/view/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/controller/DynamicForm.js" />
+            <resource path="~/App/Shared/app/view/BindingForm.js" />
+            <resource path="~/App/Shared/app/controller/BindingForm.js" />
+            <resource path="~/App/Shared/app/view/QuerySearchForm.js" />
+            <resource path="~/App/Shared/app/controller/QuerySearchForm.js" />
+            <resource path="~/App/Shared/app/view/JqlSearchForm.js" />
+            <resource path="~/App/Shared/app/controller/JqlSearchForm.js" />
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/ViewQueryComponent.js" />
+            <resource path="~/App/Shared/app/view/QueryViewerComponent.js" />
+            <resource path="~/App/Shared/app/controller/QueryViewerComponent.js" />
+        </resourceSet>
+        <resourceSet name="TreeComponent" type="js" >
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+        </resourceSet>
+        <resourceSet name="ViewportComponent" type="js" >
+            <resource path="~/App/Document/app/Viewport/view/FrameManagerViewport.js" />
+            <resource path="~/App/Document/app/Viewport/view/SimpleManagerViewport.js" />
+            <resource path="~/App/Document/app/Viewport/view/ManagerViewport.js" />
+            <resource path="~/App/Document/app/Viewport/controller/ManagerViewport.js" />
+        </resourceSet>
+        <resourceSet name="NavigatorComponent" type="js" >
+            <resource path="~/App/Document/app/Navigator/view/BreadcrumbGroupButton.js" />
+        </resourceSet>
+        <resourceSet name="FileDocumentView" type="js" >
+            <resource path="~/App/Document/app/Document/view/DocumentDetailWindow.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentsDataView.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentThumbnail.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentContextMenu.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentToolbar.js" />
+            <resource path="~/App/Shared/app/view/BindingForm.js" />
+            <resource path="~/App/Document/app/File/view/FileToolbar.js" />
+            <resource path="~/App/Document/app/File/view/FileWindow.js" />
+            <resource path="~/App/Document/app/File/view/FileView.js" />
+            <resource path="~/App/Document/app/File/view/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/view/FileReviewWindow.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Document/app/File/view/PdfReviewWindowCustom.js" />
+            <resource path="~/App/Document/app/File/view/FileVersionWindow.js" />
+            <resource path="~/App/Document/app/File/view/MoveToWindow.js" />
+            <resource path="~/App/Document/app/File/view/UploadWindow.js" />
+            <resource path="~/App/Document/app/File/view/UploadZipWindow.js" />
+            <resource path="~/App/Document/app/File/view/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/view/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/view/CreateMultiFolder.js" />
+            <resource path="~/App/Setting/app/view/Widget/WidgetForm.js" />
+            <resource path="~/App/Setting/app/view/Map/MapForm.js" />
+            <resource path="~/App/Shared/app/WorkflowHelper.js" />
+        </resourceSet>
+        <resourceSet name="FileController" type="js" >
+            <resource path="~/App/Document/app/Document/controller/DocumentDetailWindow.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentsDataView.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentThumbnail.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentContextMenu.js" />
+            <resource path="~/App/Shared/app/controller/BindingForm.js" />
+            <resource path="~/App/Document/app/File/controller/FileToolbar.js" />
+            <resource path="~/App/Document/app/File/controller/FileWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileView.js" />
+            <resource path="~/App/Document/app/File/controller/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/controller/FileReviewWindow.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+            <resource path="~/App/Document/app/File/controller/PdfReviewWindowCustom.js" />
+            <resource path="~/App/Document/app/File/controller/FileVersionWindow.js" />
+            <resource path="~/App/Document/app/File/controller/MoveToWindow.js" />
+            <resource path="~/App/Document/app/File/controller/UploadWindow.js" />
+            <resource path="~/App/Document/app/File/controller/UploadZipWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/controller/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/controller/CreateMultiFolder.js" />
+            <resource path="~/App/Setting/app/controller/Widget/WidgetForm.js" />
+            <resource path="~/App/Setting/app/controller/Map/MapForm.js" />
+            <resource path="~/App/Setting/app/global.js" />
+        </resourceSet>
+        <resourceSet name="SpaceDocumentView" type="js" >
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Document/app/view/CenterToolbar.js" />
+            <resource path="~/App/Document/app/view/ContextMenu.js" />
+            <resource path="~/App/Document/app/view/MainToolbar.js" />
+            <resource path="~/App/Document/app/view/MenuTree.js" />
+            <resource path="~/App/Document/app/view/RelateDataView.js" />
+            <resource path="~/App/Document/app/view/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/Space/view/ContentView.js" />
+            <resource path="~/App/Document/app/Space/view/DetailView.js" />
+            <resource path="~/App/Document/app/view/SpacesDataView.js" />
+            <resource path="~/App/Document/app/view/SpacesList.js" />
+            <resource path="~/App/Document/app/view/SpacesTree.js" />
+            <resource path="~/App/Document/app/view/SpaceWindow.js" />
+            <resource path="~/App/Document/app/Space/view/RelateView.js" />
+            <resource path="~/App/Document/app/Space/view/QuerySpace.js" />
+            <resource path="~/App/Document/app/Space/view/QueryToolbar.js" />
+            <resource path="~/App/Document/app/Space/view/SpaceToolbar.js" />
+            <resource path="~/App/Shared/app/view/GridAutoSizeColumn.js" />
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+        </resourceSet>
+        <resourceSet name="SpaceController" type="js" >
+            <resource path="~/App/Document/app/controller/CenterToolbar.js" />
+            <resource path="~/App/Document/app/controller/MainToolbar.js" />
+            <resource path="~/App/Document/app/controller/MenuTree.js" />
+            <resource path="~/App/Document/app/controller/RelateDataView.js" />
+            <resource path="~/App/Document/app/controller/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/Spaces.js" />
+            <resource path="~/App/Document/app/controller/SpacesList.js" />
+            <resource path="~/App/Document/app/controller/SpacesTree.js" />
+            <resource path="~/App/Document/app/Space/controller/RelateView.js" />
+            <resource path="~/App/Document/app/Space/controller/ContentView.js" />
+            <resource path="~/App/Document/app/Space/controller/DetailView.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+        </resourceSet>
+
+        <!-- Dashboard App -->
+        <resourceSet name="DashboardMapStyle" type="css" >
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/DrawTool/Css/drawtool.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/css/MapField.css" />
+        </resourceSet>
+        <resourceSet name="DashboardStyle" type="css" >
+            <resource reference="DashboardMapStyle" />
+            <resource reference="DocumentStyle" />
+
+            <resource path="~/App/Document/style/dashboard.css" />
+            <resource path="~/App/Dashboard/styles/index.css" />
+        </resourceSet>
+
+        <resourceSet name="DashboardMapScript" type="js" >
+            <resource reference="VbdMapApiNewScript" />
+
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+        </resourceSet>
+
+        <resourceSet name="DashboardScript" type="js" >
+            <resource reference="DocumentScript" />
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="DashboardMapScript" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource reference="FileDocumentView" />
+            <resource reference="FileController" />
+            <resource reference="SpaceDocumentView" />
+            <resource reference="SpaceController" />
+            <resource path="~/App/Dashboard/app/utils.js" />
+            <resource reference="QueryViewerComponent" />
+
+            <resource path="~/App/Document/app/view/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/view/ReportBuilderViewer.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderViewer.js" />
+            <resource path="~/App/ReportBuilder/app/view/GeoChooser.js" />
+            <resource path="~/App/ReportBuilder/app/controller/GeoChooser.js" />
+
+            <resource path="~/App/Dashboard/portlet/view/BasePortlet.js" />
+            <resource path="~/App/Dashboard/portlet/view/RSSPortlet.js" />
+            <resource path="~/App/Dashboard/portlet/view/ReportViewPortlet.js" />
+            <resource path="~/App/Dashboard/portlet/view/ManagePortlet.js" />
+            <resource path="~/App/Dashboard/portlet/controller/BasePortlet.js" />
+            <resource path="~/App/Dashboard/portlet/controller/RSSPortlet.js" />
+            <resource path="~/App/Dashboard/portlet/controller/ReportViewPortlet.js" />
+            <resource path="~/App/Dashboard/portlet/controller/ManagePortlet.js" />
+            <resource path="~/App/Dashboard/portlet/view/QueryBuilderPortlet.js" />
+            <resource path="~/App/Dashboard/portlet/controller/QueryBuilderPortlet.js" />
+
+            <resource path="~/App/Dashboard/app/view/MainToolbar.js" />
+            <resource path="~/App/Dashboard/app/controller/MainToolbar.js" />
+            <resource path="~/App/Dashboard/app/view/DashboardPanel.js" />
+            <resource path="~/App/Dashboard/app/controller/DashboardPanel.js" />
+            <resource path="~/App/Dashboard/app/view/ListDashboardPanel.js" />
+            <resource path="~/App/Dashboard/app/controller/ListDashboardPanel.js" />
+            <resource path="~/App/Dashboard/app/view/ManagePage.js" />
+            <resource path="~/App/Dashboard/app/controller/ManagePage.js" />
+            <resource path="~/App/Dashboard/app/view/DashboardIndex.js" />
+            <resource path="~/App/Dashboard/app/controller/DashboardIndex.js" />
+        </resourceSet>
+
+        <resourceSet name="DashboardApp" type="js" >
+            <resource reference="DashboardScript" />
+
+            <resource path="~/App/Dashboard/app/view/Viewport.js" />
+            <resource path="~/App/Dashboard/app/app.js" />
+        </resourceSet>
+        <!-- /Dashboard App -->
+
+        <!-- Document App -->
+        <resourceSet name="DocumentApp_Dashboard" type="js" >
+            <resource reference="DashboardScript" />
+
+            <resource path="~/App/Document/app/dashboard.js" />
+        </resourceSet>
+        <resourceSet name="DocumentApp_Manager" type="js" >
+            <resource path="~/cdn/libs/jquery.particleground.min.js" />
+            <resource path="~/cdn/ChartRender/Chart/ux/vdmscharts.js" />
+            <resource path="~/App/Document/app/signalr.js" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource reference="PdfReviewScript" />
+            <resource reference="FileDocumentView" />
+            <resource reference="FileController" />
+            <resource reference="SpaceDocumentView" />
+            <resource reference="SpaceController" />
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="TreeComponent" />
+            <resource reference="ViewportComponent" />
+            <resource reference="NavigatorComponent" />
+            <resource reference="QueryViewerComponent" />
+
+            <resource path="~/App/Shared/app/view/GeometrySetting.js" />
+            <resource path="~/App/Document/app/view/DynamicReportPanel.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilder.js" />
+            <resource path="~/App/Document/app/Space/view/ShareLayerDetail.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilderShared.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilderSimple.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilderSearchFilter.js" />
+            <resource path="~/App/Document/app/view/LayerSwitcher.js" />
+            <resource path="~/App/Document/app/view/MapSearchPanel.js" />
+            <resource path="~/App/Document/app/view/NorthPanel.js" />
+            <resource path="~/App/Document/app/view/QueryBuilder.js" />
+            <resource path="~/App/Document/app/view/RegionTree.js" />
+            <resource path="~/App/ReportBuilder/app/view/GeoChooser.js" />
+            <resource path="~/App/Document/app/view/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/view/OdataPanel.js" />
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/view/ServiceWindow.js" />
+            <resource path="~/App/Document/app/view/ShareTree.js" />
+            <resource path="~/App/Document/app/view/ShareWindow.js" />
+            <resource path="~/App/Document/app/view/StreetSearchPanel.js" />
+            <resource path="~/App/Document/app/view/StreetSearchWindow.js" />
+            <resource path="~/App/Document/app/view/TaskPanel.js" />
+            <resource path="~/App/Document/app/view/TaskWindow.js" />
+            <resource path="~/App/Document/app/view/ThemeBuilder.js" />
+            <resource path="~/App/Document/app/view/UserProfile.js" />
+            <resource path="~/App/Document/app/view/UserPassword.js" />
+            <resource path="~/App/Shared/app/view/MapAdvancePanel.js" />
+            <resource path="~/App/Shared/app/view/StreetFinderPanel.js" />
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/view/SimpleDetailPanel.js" />
+            <resource path="~/App/Document/app/view/GridQueryBuilder.js" />
+            <resource path="~/App/Document/app/controller/DynamicReportPanel.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilder.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilderShared.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilderSimple.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilderSearchFilter.js" />
+            <resource path="~/App/Document/app/controller/LayerSwitcher.js" />
+            <resource path="~/App/Document/app/controller/MapSearchPanel.js" />
+            <resource path="~/App/Document/app/controller/QueryBuilder.js" />
+            <resource path="~/App/Document/app/controller/RegionTree.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderView.js" />
+            <resource path="~/App/ReportBuilder/app/controller/GeoChooser.js" />
+            <resource path="~/App/Document/app/controller/OdataPanel.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+            <resource path="~/App/Document/app/controller/ServiceWindow.js" />
+            <resource path="~/App/Document/app/controller/ShareTree.js" />
+            <resource path="~/App/Document/app/controller/ShareWindow.js" />
+            <resource path="~/App/Document/app/controller/StreetSearchPanel.js" />
+            <resource path="~/App/Document/app/controller/StreetSearchWindow.js" />
+            <resource path="~/App/Document/app/controller/TaskPanel.js" />
+            <resource path="~/App/Document/app/controller/TaskWindow.js" />
+            <resource path="~/App/Document/app/controller/ThemeBuilder.js" />
+            <resource path="~/App/Document/app/controller/UserProfile.js" />
+            <resource path="~/App/Document/app/controller/UserPassword.js" />
+            <resource path="~/App/Shared/app/controller/MapAdvancePanel.js" />
+            <resource path="~/App/Shared/app/controller/StreetFinderPanel.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/SimpleDetailPanel.js" />
+            <resource path="~/App/Document/app/controller/GridQueryBuilder.js" />
+
+            <resource path="~/App/Document/app/view/ReportView.js" />
+            <resource path="~/App/Document/app/controller/ReportView.js" />
+            <resource path="~/App/Document/app/view/ReportBuilderViewer.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderViewer.js" />
+
+            <resource path="~/App/Document/app/ReportViewUtils.js" />
+
+            <resource path="~/App/Document/app/manager.js" />
+        </resourceSet>
+        <resourceSet name="DocumentApp_Explore" type="js" >
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource reference="FileDocumentView" />
+            <resource reference="FileController" />
+            <resource reference="SpaceDocumentView" />
+            <resource reference="SpaceController" />
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="TreeComponent" />
+            <resource reference="ViewportComponent" />
+            <resource reference="NavigatorComponent" />
+            <resource path="~/App/Shared/app/view/GeometrySetting.js" />
+            <resource path="~/App/Document/app/view/DynamicReportPanel.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilder.js" />
+            <resource path="~/App/Document/app/Space/view/ShareLayerDetail.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilderSimple.js" />
+            <resource path="~/App/Document/app/view/GeoQueryBuilderSearchFilter.js" />
+            <resource path="~/App/Document/app/view/LayerSwitcher.js" />
+            <resource path="~/App/Document/app/view/MapSearchPanel.js" />
+            <resource path="~/App/Document/app/view/NorthPanel.js" />
+            <resource path="~/App/Document/app/view/QueryBuilder.js" />
+            <resource path="~/App/Document/app/view/RegionTree.js" />
+            <resource path="~/App/Document/app/view/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/view/OdataPanel.js" />
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/view/ServiceWindow.js" />
+            <resource path="~/App/Document/app/view/ShareTree.js" />
+            <resource path="~/App/Document/app/view/ShareWindow.js" />
+            <resource path="~/App/Document/app/view/StreetSearchPanel.js" />
+            <resource path="~/App/Document/app/view/StreetSearchWindow.js" />
+            <resource path="~/App/Document/app/view/TaskPanel.js" />
+            <resource path="~/App/Document/app/view/TaskWindow.js" />
+            <resource path="~/App/Document/app/view/ThemeBuilder.js" />
+            <resource path="~/App/Document/app/view/UserProfile.js" />
+            <resource path="~/App/Document/app/view/UserPassword.js" />
+            <resource path="~/App/Shared/app/view/MapAdvancePanel.js" />
+            <resource path="~/App/Shared/app/view/StreetFinderPanel.js" />
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/view/SimpleDetailPanel.js" />
+            <resource path="~/App/Document/app/controller/DynamicReportPanel.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilder.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilderSimple.js" />
+            <resource path="~/App/Document/app/controller/GeoQueryBuilderSearchFilter.js" />
+            <resource path="~/App/Document/app/controller/LayerSwitcher.js" />
+            <resource path="~/App/Document/app/controller/MapSearchPanel.js" />
+            <resource path="~/App/Document/app/controller/QueryBuilder.js" />
+            <resource path="~/App/Document/app/controller/RegionTree.js" />
+            <resource path="~/App/Document/app/controller/ReportBuilderView.js" />
+            <resource path="~/App/Document/app/controller/OdataPanel.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+            <resource path="~/App/Document/app/controller/ServiceWindow.js" />
+            <resource path="~/App/Document/app/controller/ShareTree.js" />
+            <resource path="~/App/Document/app/controller/ShareWindow.js" />
+            <resource path="~/App/Document/app/controller/StreetSearchPanel.js" />
+            <resource path="~/App/Document/app/controller/StreetSearchWindow.js" />
+            <resource path="~/App/Document/app/controller/TaskPanel.js" />
+            <resource path="~/App/Document/app/controller/TaskWindow.js" />
+            <resource path="~/App/Document/app/controller/ThemeBuilder.js" />
+            <resource path="~/App/Document/app/controller/UserProfile.js" />
+            <resource path="~/App/Document/app/controller/UserPassword.js" />
+            <resource path="~/App/Shared/app/controller/MapAdvancePanel.js" />
+            <resource path="~/App/Shared/app/controller/StreetFinderPanel.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/SimpleDetailPanel.js" />
+            <resource path="~/App/Document/app/explore.js" />
+        </resourceSet>
+
+        <!-- /DOCUMENT -->
+
+        <!-- SETTING -->
+        <resourceSet name="SettingStyle" type="css" >
+            <resource reference="GlobalExtJs6Theme" />
+            <resource reference="MapEditorStyle" />
+            <resource path="~/App/Setting/style/main.css" />
+
+        </resourceSet>
+        <resourceSet name="SettingScript" type="js" >
+            <resource reference="GlobalExtJs6Script" />
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="VbdMapApiNewScript" />
+            <resource reference="MapEditorScript" />
+        </resourceSet>
+        <resourceSet name="SettingApp" type="js" >
+            <resource reference="TreeComponent" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Shared/app/WorkflowHelper.js" />
+            <resource path="~/App/Document/app/File/view/UploadWindow.js" />
+            <resource path="~/App/Document/app/File/controller/UploadWindow.js" />
+            <resource path="~/App/Document/app/view/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/controller/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+            <resource path="~/App/Shared/mapeditortool/view/MapEditorTool.js" />
+            <resource path="~/App/Shared/mapeditortool/controller/MapEditorTool.js" />
+            <resource path="~/App/Shared/mapeditortool/MapEditor.Utils.js" />
+
+            <resource path="~/App/Setting/app/view/Widget/WidgetForm.js" />
+            <resource path="~/App/Setting/app/controller/Widget/WidgetForm.js" />
+            <resource path="~/App/Setting/app/view/DataManager/DataManagerForm.js" />
+            <resource path="~/App/Setting/app/controller/DataManager/DataManagerForm.js" />
+
+            <resource path="~/App/Setting/app/view/Public/PublicForm.js" />
+            <resource path="~/App/Setting/app/controller/Public/PublicForm.js" />
+            <resource path="~/App/Setting/app/view/Public/PublicLogo.js" />
+            <resource path="~/App/Setting/app/controller/Public/PublicLogo.js" />
+            <resource path="~/App/Setting/app/view/Public/MapEditor.js" />
+            <resource path="~/App/Setting/app/controller/Public/MapEditor.js" />
+
+            <resource path="~/App/Setting/app/view/Viewport.js" />
+            <resource path="~/App/Setting/app/controller/Viewport.js" />
+            <resource path="~/App/Setting/app/global.js" />
+            <resource path="~/App/Setting/app/app.js" />
+        </resourceSet>
+        <!-- /SETTING -->
+
+        <!-- EXPLORE -->
+        <resourceSet name="ExploreStyle" type="css" >
+            <resource reference="CommonStyle" />
+            <resource reference="ExtJs5Style" />
+            <resource path="~/App/Document/style/map.css" />
+            <resource path="~/App/Explore/style/main.css" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Css/drawtool.css" />
+        </resourceSet>
+        <resourceSet name="ExploreScript" type="js" >
+            <resource reference="CommonScript" />
+            <resource reference="ExtJs5Script" />
+
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="VbdMapApiNewScript" />
+            <resource path="~/cdn/API/VBDMapAPI.GeoJSON2.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/5.1.2/ux/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1//ContextMenu.js" />
+        </resourceSet>
+        <resourceSet name="ExploreApp" type="js" >
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+
+            <resource reference="QueryViewerComponent" />
+
+            <resource path="~/App/Document/app/Space/view/ContentView.js" />
+            <resource path="~/App/Document/app/Space/controller/ContentView.js" />
+
+            <resource path="~/App/Document/app/Space/view/DetailView.js" />
+            <resource path="~/App/Document/app/Space/controller/DetailView.js" />
+
+            <resource path="~/App/Document/app/Space/view/RelateView.js" />
+            <resource path="~/App/Document/app/Space/controller/RelateView.js" />
+
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+            <resource path="~/App/Document/app/view/StreetSearchWindow.js" />
+            <resource path="~/App/Document/app/controller/StreetSearchWindow.js" />
+
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Draw.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Editting.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Snap.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/SnapLayer.js" />
+            <resource path="~/cdn/extjs/5.1.2/ux/DrawTool/Libs/Buffer.js" />
+
+            <resource path="~/App/Explore/common/DrawTool.js" />
+
+            <resource path="~/App/Explore/app/global.js" />
+            <resource path="~/App/Explore/app/app.js" />
+        </resourceSet>
+        <!-- /EXPLORE -->
+
+        <!-- RECYCLE BIN -->
+        <resourceSet name="RecycleBinStyle" type="css" >
+            <resource reference="CommonStyle" />
+            <resource reference="ExtJs6ThemeDodgeBlueCSS" />
+            <resource path="~/App/Document/style/map.css" />
+            <resource path="~/App/Explore/style/main.css" />
+        </resourceSet>
+        <resourceSet name="RecycleBinScript" type="js" >
+            <resource reference="CommonScript" />
+            <resource reference="ExtJs6Script" />
+            <resource reference="ExtJs6ThemeDodgeBlueJS" />
+            <resource reference="AjaxProxyComponent" />
+
+            <resource path="~/App/RecycleBin/app/view/AjaxProReaderEx.js" />
+            <resource reference="VbdMapApiNewScript" />
+            <resource path="~/cdn/API/VBDMapAPI.GeoJSON2.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1//ContextMenu.js" />
+
+        </resourceSet>
+        <resourceSet name="RecycleBinApp" type="js" >
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+            <resource path="~/App/Document/app/Space/view/DetailView.js" />
+            <resource path="~/App/Document/app/Space/controller/DetailView.js" />
+            <resource path="~/App/RecycleBin/app/controller/DetailView.js" />
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/RecycleBin/app/view/RecycleBinPanel.js" />
+            <resource path="~/App/RecycleBin/app/controller/RecycleBinPanel.js" />
+            <resource path="~/App/RecycleBin/app/view/Viewport.js" />
+            <resource path="~/App/RecycleBin/app/controller/Viewport.js" />
+            <resource path="~/App/RecycleBin/app/app.js" />
+        </resourceSet>
+        <!-- /RECYCLE BIN -->
+
+        <!-- BACKUP -->
+        <resourceSet name="BackupStyle" type="css" >
+            <resource reference="CommonStyle" />
+            <resource reference="ExtJs5Style" />
+            <resource path="~/App/Backup/style/main.css" />
+        </resourceSet>
+        <resourceSet name="BackupScript" type="js" >
+            <resource reference="CommonScript" />
+            <resource reference="ExtJs5Script" />
+            <resource reference="AjaxProxyComponent" />
+        </resourceSet>
+        <resourceSet name="BackupApp" type="js" >
+            <resource reference="TreeComponent" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Shared/app/WorkflowHelper.js" />
+            <resource path="~/App/Document/app/File/view/UploadWindow.js" />
+            <resource path="~/App/Document/app/File/controller/UploadWindow.js" />
+            <resource path="~/App/Document/app/view/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/controller/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Backup/app/view/Viewport.js" />
+            <resource path="~/App/Backup/app/controller/Viewport.js" />
+            <resource path="~/App/Backup/app/view/RestoreSetting.js" />
+            <resource path="~/App/Backup/app/controller/RestoreSetting.js" />
+            <resource path="~/App/Backup/app/view/BackupSetting.js" />
+            <resource path="~/App/Backup/app/controller/BackupSetting.js" />
+            <resource path="~/App/Backup/app/global.js" />
+            <resource path="~/App/Backup/app/app.js" />
+        </resourceSet>
+        <!-- /BACKUP -->
+
+        <!-- SYSTEM -->
+        <resourceSet name="SystemStyle" type="css" >
+            <resource reference="ExtJs5Style" />
+            <resource reference="CommonStyle" />
+            <resource path="~/App/System/style/main.css" />
+        </resourceSet>
+        <resourceSet name="SystemScript" type="js" >
+            <resource reference="ExtJs5Script" />
+            <resource reference="CommonScript" />
+            <resource reference="AjaxProxyComponent" />
+        </resourceSet>
+        <resourceSet name="SystemApp" type="js" >
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+
+            <resource path="~/cdn/Libs/ExcelGrid.js" />
+
+            <resource path="~/App/Document/app/view/SecurityWindowAdv.js" />
+            <resource path="~/App/Document/app/controller/SecurityWindowAdv.js" />
+
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+
+            <resource path="~/App/System/app/view/statistic/ReportContainer.js" />
+            <resource path="~/App/System/app/controller/statistic/ReportContainer.js" />
+
+            <resource path="~/App/System/app/view/statistic/ReportRequest.js" />
+            <resource path="~/App/System/app/controller/statistic/ReportRequest.js" />
+            <resource path="~/App/System/app/view/statistic/DataRequest.js" />
+            <resource path="~/App/System/app/controller/statistic/DataRequest.js" />
+            <resource path="~/App/System/app/view/statistic/DataLogs.js" />
+            <resource path="~/App/System/app/controller/statistic/DataLogs.js" />
+
+            <resource path="~/App/System/app/view/statistic/DetailReport.js" />
+
+            <resource path="~/App/System/app/view/Viewport.js" />
+            <resource path="~/App/System/app/controller/Viewport.js" />
+            <resource path="~/App/System/app/global.js" />
+            <resource path="~/App/System/app/patchSystem.js" />
+            <resource path="~/App/System/app/app.js" />
+        </resourceSet>
+        <!-- /SYSTEM -->
+
+        <!-- DATAUPDATE -->
+        <resourceSet name="DataUpdateStyle" type="css" >
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/DrawTool/Css/drawtool.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/css/MapField.css" />
+            <resource path="~/App/Shared/DataUpdate/styles/index.css" />
+        </resourceSet>
+        <resourceSet name="DataUpdateScriptSimple" type="js" >
+            <resource path="~/App/Shared/DataUpdate/utils.js"/>
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+            <resource path="~/App/Shared/DataUpdate/view/PropertyDataGrid.js" />
+            <resource path="~/App/Shared/DataUpdate/controller/PropertyDataGrid.js" />
+            <resource path="~/App/Shared/DataUpdate/view/DataUpdateGrid.js" />
+            <resource path="~/App/Shared/DataUpdate/controller/DataUpdateGrid.js" />
+            <resource path="~/App/Shared/DataUpdate/view/DataUpdateIndex.js" />
+            <resource path="~/App/Shared/DataUpdate/controller/DataUpdateIndex.js" />
+        </resourceSet>
+        <resourceSet name="DataUpdateScript" type="js" >
+            <resource reference="CommonScript" />
+            <resource reference="AjaxProxyComponent" />
+
+            <resource reference="VbdMapApiNewScript" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+
+            <resource path="~/App/Document/app/Space/view/DetailView.js" />
+            <resource path="~/App/Document/app/Space/controller/DetailView.js" />
+
+            <resource reference="DataUpdateScriptSimple" />
+        </resourceSet>
+        <resourceSet name="DataUpdateApp" type="js" >
+            <resource path="~/App/Shared/DataUpdate/document.global.js"/>
+            <resource reference="DataUpdateScript" />
+
+            <resource path="~/App/DataUpdate/app/view/Viewport.js" />
+            <resource path="~/App/DataUpdate/app/dataupdate.js" />
+        </resourceSet>
+        <!-- /DATAUPDATE -->
+
+        <!-- DATAMANAGER -->
+        <resourceSet name="DataManagerMapStyle" type="css" >
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/DrawTool/Css/drawtool.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/css/MapField.css" />
+        </resourceSet>
+        <resourceSet name="DataManagerMapScript" type="js" >
+            <resource reference="VbdMapApiNewScript" />
+
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+        </resourceSet>
+
+        <resourceSet name="DataManagerStyle" type="css" >
+            <resource reference="DataManagerMapStyle" />
+            <resource reference="DocumentStyle" />
+            <resource reference="DataUpdateStyle" />
+
+            <resource path="~/App/DataManager/styles/index.css" />
+        </resourceSet>
+        <resourceSet name="DataManagerScript" type="js" >
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="DataManagerMapScript" />
+            <resource path="~/App/DataManager/app/global.js"/>
+            <resource path="~/App/DataManager/app/utils.js"/>
+            <resource path="~/App/Document/app/Space/Util.js" />
+
+            <resource reference="DocumentScript" />
+            <resource reference="NavigatorComponent" />
+            <resource reference="QueryViewerComponent" />
+            <resource reference="DataUpdateScriptSimple" />
+
+            <resource path="~/App/Shared/app/view/TreeQueryComponent.js" />
+
+            <resource path="~/App/Explore/app/view/LayerSwitcher.js" />
+
+            <resource path="~/App/Shared/app/view/GeometrySetting.js" />
+            <resource path="~/App/Document/app/File/view/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/controller/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/view/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/view/FileReviewWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileReviewWindow.js" />
+            <resource path="~/App/Document/app/File/view/FileWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileWindow.js" />
+            <resource path="~/App/Document/app/File/view/FileVersionWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileVersionWindow.js" />
+            <resource path="~/App/Shared/app/QueryHistory.js" />
+
+            <resource path="~/App/Document/app/Document/view/DocumentDetailWindow.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentsDataView.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentThumbnail.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentContextMenu.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentDetailWindow.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentsDataView.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentThumbnail.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentContextMenu.js" />
+
+            <resource path="~/App/Document/app/File/view/UploadWindow.js" />
+            <resource path="~/App/Document/app/File/controller/UploadWindow.js" />
+            <resource path="~/App/Document/app/Space/view/DetailView.js" />
+            <resource path="~/App/Document/app/Space/controller/DetailView.js" />
+            <resource path="~/App/Document/app/Space/view/ContentView.js" />
+            <resource path="~/App/Document/app/Space/controller/ContentView.js" />
+            <resource path="~/App/Document/app/Space/view/RelateView.js" />
+            <resource path="~/App/Document/app/Space/controller/RelateView.js" />
+            <resource path="~/App/Document/app/Document/view/DocumentDetailWindow.js" />
+            <resource path="~/App/Document/app/Document/controller/DocumentDetailWindow.js" />
+
+            <resource path="~/App/Setting/app/view/Widget/WidgetForm.js" />
+            <resource path="~/App/Setting/app/controller/Widget/WidgetForm.js" />
+            <resource path="~/App/Setting/app/view/DataManager/DataManagerForm.js" />
+            <resource path="~/App/Setting/app/controller/DataManager/DataManagerForm.js" />
+
+            <resource path="~/App/Shared/app/view/FilterQuery.js" />
+            <resource path="~/App/Shared/app/controller/FilterQuery.js" />
+            <resource path="~/App/Shared/app/view/PropertyFilter.js" />
+            <resource path="~/App/Shared/app/controller/PropertyFilter.js" />
+
+            <resource path="~/App/DataManager/app/view/LayerSwitcher.js" />
+            <resource path="~/App/DataManager/app/controller/LayerSwitcher.js" />
+            <resource path="~/App/DataManager/app/view/LayerSwitcherForm.js" />
+            <resource path="~/App/DataManager/app/controller/LayerSwitcherForm.js" />
+            <resource path="~/App/DataManager/app/view/TreeDataManager.js" />
+            <resource path="~/App/DataManager/app/controller/TreeDataManager.js" />
+            <resource path="~/App/DataManager/app/view/QueryDataManager.js" />
+            <resource path="~/App/DataManager/app/controller/QueryDataManager.js" />
+            <resource path="~/App/Shared/mapprint/view/MapPrintPage.js" />
+            <resource path="~/App/Shared/mapprint/controller/MapPrintPage.js" />
+            <resource path="~/App/Shared/mapprint/mapprint.global.js" />
+            <resource path="~/App/DataManager/app/view/MapDataManager.js" />
+            <resource path="~/App/DataManager/app/controller/MapDataManager.js" />
+            <resource path="~/App/DataManager/app/view/DataManagerIndex.js" />
+            <resource path="~/App/DataManager/app/controller/DataManagerIndex.js" />
+        </resourceSet>
+        <resourceSet name="DataManagerApp" type="js" >
+            <resource path="~/App/DataManager/app/document.global.js"/>
+            <resource reference="DataManagerScript" />
+
+            <resource path="~/App/DataManager/app/view/Viewport.js" />
+            <resource path="~/App/DataManager/app/datamanager.js" />
+        </resourceSet>
+        <resourceSet name="DataManagerApp_Manager" type="js" >
+            <resource path="~/App/DataManager/app/document.global.js"/>
+            <resource reference="DataManagerScript" />
+
+            <resource path="~/App/Shared/app/view/TreeLayer.js" />
+            <resource path="~/App/Shared/app/controller/TreeLayer.js" />
+
+            <resource path="~/App/Document/app/Tree/view/HybridTree.js" />
+            <resource path="~/App/Document/app/view/SaveToWindow.js" />
+            <resource path="~/App/Document/app/Tree/controller/HybridTree.js" />
+            <resource path="~/App/Document/app/controller/SaveToWindow.js" />
+
+            <resource path="~/App/DataManager/app/view/ViewportManager.js" />
+            <resource path="~/App/DataManager/app/datamanager.manager.js" />
+        </resourceSet>
+        <!-- /DATAMANAGER -->
+
+        <!-- Admin User -->
+        <resourceSet name="AdminUsersStyle" type="css" >
+            <resource path="~/App/Admin/Role/style/icon.css" />
+            <resource path="~/App/Admin/Role/style/main.css" />
+        </resourceSet>
+
+        <resourceSet name="AdminUsersScript" type="js" >
+            <resource reference="AjaxProxyComponent"/>
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/MapField.js" />
+
+            <resource path="~/App/Shared/app/view/QueryComponent.js" />
+            <resource path="~/App/Shared/app/view/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/controller/GroupAndUserWindow.js" />
+            <resource path="~/App/Shared/app/view/BindingForm.js" />
+            <resource path="~/App/Shared/app/controller/BindingForm.js" />
+            <resource path="~/App/Document/app/File/view/DynamicForm.js" />
+            <resource path="~/App/Document/app/File/controller/DynamicForm.js" />
+            <resource path="~/App/Document/app/Space/Util.js" />
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/global.js" />
+            <resource path="~/App/Document/app/File/view/FileReviewWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileReviewWindow.js" />
+            <resource path="~/App/Document/app/File/view/FileWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FileWindow.js" />
+            <resource path="~/App/Document/app/File/view/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/controller/FolderWindow.js" />
+            <resource path="~/App/Document/app/File/view/ContentWindow.js" />
+            <resource path="~/App/Document/app/File/controller/ContentWindow.js" />
+            <resource path="~/App/Document/app/view/SecurityManager.js" />
+            <resource path="~/App/Document/app/controller/SecurityManager.js" />
+            <resource path="~/App/Admin/Role/app/view/UserInfoWindow.js" />
+            <resource path="~/App/Admin/Role/app/controller/UserInfoWindow.js" />
+            <resource path="~/App/Admin/Role/app/view/AgentDeviceManager.js" />
+            <resource path="~/App/Admin/Role/app/controller/AgentDeviceManager.js" />
+
+
+            <resource path="~/App/Admin/Users/app/view/UsersManager.js" />
+            <resource path="~/App/Admin/Users/app/controller/UsersManager.js" />
+        </resourceSet>
+        <resourceSet name="AdminUsersApp" type="js" >
+            <resource reference="AdminUsersScript"/>
+            <resource path="~/App/Admin/Users/app/view/Viewport.js" />
+            <resource path="~/App/Admin/Users/app/app.js" />
+        </resourceSet>
+        <!-- /Admin User -->
+
+        <!-- Mobile -->
+        <resourceSet name="VDMSMobileStyle" type="css" >
+            <resource path="~/cdn/extjs/6.2.0/modern/theme-material/resources/theme-material-all.css"/>
+        </resourceSet>
+        <resourceSet name="VDMSMobileScript" type="js" >
+            <resource path="~/cdn/Libs/Lang.js" />
+            <resource path="~/cdn/Libs/jquery.js" />
+            <resource path="~/cdn/Libs/jqueryui.js" />
+            <resource path="~/cdn/libs/jquery.autocomplete.min.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1/vietbandomapsapi.js"/>
+            <resource path="~/cdn/extjs/6.2.0/ext-modern-all.js"/>
+            <resource path="~/cdn/extjs/6.2.0/modern/theme-material/theme-material.js"/>
+
+        </resourceSet>
+        <resourceSet name="VDMSMobileDocumentStyle" type="css" >
+            <resource path="~/Mobile/Document/styles/document.css"/>
+            <resource path="~/Mobile/Shared/searchfield/search.css"/>
+            <resource path="~/Mobile/Document/styles/icon.css"/>
+            <resource path="~/cdn/Libs/dropzone/dropzone.css" />
+            <resource path="~/cdn/Libs/iViewer/jquery.iviewer.css" />
+            <resource path="~/cdn/Libs/video-js/video-js.css" />
+            <resource path="~/cdn/Libs/codemirror/lib/codemirror.css" />
+        </resourceSet>
+        <resourceSet name="VDMSMobileDocumentScript" type="js" >
+
+            <resource path="~/cdn/Libs/jsbeautify.js" />
+            <resource path="~/cdn/Libs/video-js/video.js" />
+            <resource path="~/cdn/Libs/codemirror/lib/codemirror.js" />
+            <resource path="~/cdn/Libs/codemirror/mode/javascript/javascript.js" />
+            <resource path="~/cdn/Libs/codemirror/mode/sql/sql-formatter.min.js" />
+            <resource path="~/cdn/Libs/codemirror/mode/sql/sql.js" />
+            <resource path="~/cdn/Libs/javascript.util.js" />
+            <resource path="~/cdn/Libs/jsts.js" />
+            <resource path="~/cdn/API/VBDMapAPI.GeoJSON2.js" />
+            <resource path="~/Mobile/Shared/searchfield/SearchField.js"/>
+            <resource path="~/Mobile/Shared/map/Map.js"/>
+            <resource path="~/Mobile/Shared/map/MapModel.js"/>
+            <resource path="~/Mobile/Shared/VbdMapField.js"/>
+            <resource path="~/Mobile/Shared/CustomDatePicker.js"/>
+            <resource path="~/Mobile/Shared/bindingform/BindingForm.js"/>
+            <resource path="~/Mobile/Shared/bindingform/BindingFormController.js"/>
+            <resource path="~/Mobile/Document/app/view/profile/Profile.js"/>
+            <resource path="~/Mobile/Document/app/view/profile/ProfileController.js"/>
+            <resource path="~/Mobile/Shared/treefolder/TreeFolder.js"/>
+            <resource path="~/Mobile/Shared/treefolder/TreeFolderController.js"/>
+            <resource path="~/Mobile/Shared/treelayer/TreeLayer.js"/>
+            <resource path="~/Mobile/Shared/treelayer/TreeLayerController.js"/>
+
+            <resource path="~/cdn/Libs/iViewer/jquery.iviewer.min.js" />
+            <resource path="~/Mobile/Document/app/Global.js"/>
+            <resource path="~/Mobile/Document/app/SettingGlobal.js"/>
+            <resource path="~/Mobile/Document/app/Util.js"/>
+
+            <resource path="~/cdn/Libs/dropzone/dropzone.js" />
+            <resource path="~/Mobile/Shared/QueryCondition.js"/>
+            <resource path="~/Mobile/Shared/QueryComponent.js"/>
+            <resource path="~/Mobile/Document/libs/jquery.uploadify.js"/>
+            <resource path="~/Mobile/Document/libs/CodeMirror.js"/>
+            <resource path="~/Mobile/Document/app/view/CodeMirror.js"/>
+            <resource path="~/Mobile/Document/app/view/Breadcrumb.js"/>
+            <resource path="~/Mobile/Document/app/view/navigationbar/NavigationBar.js"/>
+            <resource path="~/Mobile/Document/app/view/navigationbar/NavigationBarController.js"/>
+            <resource path="~/Mobile/Document/app/view/fileversion/FileVersion.js"/>
+            <resource path="~/Mobile/Document/app/view/fileversion/FileVersionController.js"/>
+            <resource path="~/Mobile/Document/app/view/detail/Detail.js"/>
+            <resource path="~/Mobile/Document/app/view/detail/DetailController.js"/>
+            <resource path="~/Mobile/Document/app/view/createfolder/CreateFolder.js"/>
+            <resource path="~/Mobile/Document/app/view/createfolder/CreateFolderController.js"/>
+            <resource path="~/Mobile/Document/app/view/createfolder/CreateMultiFolder.js"/>
+            <resource path="~/Mobile/Document/app/view/createfolder/CreateMultiFolderController.js"/>
+            <resource path="~/Mobile/Document/app/view/createfile/CreateFile.js"/>
+            <resource path="~/Mobile/Document/app/view/createfile/CreateFileController.js"/>
+            <resource path="~/Mobile/Document/app/view/dynamic/DynamicForm.js"/>
+            <resource path="~/Mobile/Document/app/view/dynamic/DynamicFormController.js"/>
+            <resource path="~/Mobile/Document/app/view/grantpermission/GrantPermission.js"/>
+            <resource path="~/Mobile/Document/app/view/grantpermission/GrantPermissionController.js"/>
+            <resource path="~/Mobile/Document/app/view/grantpermission/AddPermission.js"/>
+            <resource path="~/Mobile/Document/app/view/grantpermission/AddPermissionController.js"/>
+
+            <resource path="~/Mobile/Document/app/view/movetofolder/MoveToFolder.js"/>
+            <resource path="~/Mobile/Document/app/view/movetofolder/MoveToFolderController.js"/>
+            <resource path="~/Mobile/Document/app/view/pdf/PdfViewer.js"/>
+            <resource path="~/Mobile/Document/app/view/pdf/PdfViewerController.js"/>
+            <resource path="~/Mobile/Document/app/view/upload/Upload.js"/>
+            <resource path="~/Mobile/Document/app/view/upload/UploadController.js"/>
+            <resource path="~/Mobile/Document/app/view/documentdetail/DocumentDetail.js"/>
+            <resource path="~/Mobile/Document/app/view/documentdetail/DocumentDetailController.js"/>
+            <resource path="~/Mobile/Document/app/view/widget/Widget.js"/>
+            <resource path="~/Mobile/Document/app/view/widget/WidgetController.js"/>
+            <resource path="~/Mobile/Document/document.js"/>
+            <resource path="~/Mobile/Document/app/Application.js"/>
+            <resource path="~/Mobile/Document/app/view/main/MainModel.js"/>
+            <resource path="~/Mobile/Document/app/view/main/MainController.js"/>
+            <resource path="~/Mobile/Document/app/view/main/Main.js"/>
+        </resourceSet>
+
+        <resourceSet name="VDMSMobileExploreStyle" type="css" >
+            <resource path="~/Mobile/Explore/common/routingpath/routingpath.css"/>
+            <resource path="~/Mobile/Shared/searchfield/search.css"/>
+            <resource path="~/Mobile/Explore/styles/explore.css"/>
+            <resource path="~/Mobile/Explore/styles/icon.css"/>
+
+        </resourceSet>
+
+        <resourceSet name="VDMSMobileExploreScript" type="js" >
+            <resource reference="VbdMapApiNewScript" />
+            <resource path="~/Mobile/Document/app/Global.js"/>
+            <resource path="~/Mobile/Explore/app/view/LayerSwitcher.js"/>
+            <resource path="~/Mobile/Explore/app/view/map/Map.js"/>
+            <resource path="~/Mobile/Explore/app/view/map/MapModel.js"/>
+            <resource path="~/Mobile/Explore/app/view/main/Main.js"/>
+            <resource path="~/Mobile/Explore/app/view/main/MainController.js"/>
+            <resource path="~/Mobile/Explore/app/view/main/MainModel.js"/>
+            <resource path="~/Mobile/Explore/common/ContextMenu.js"/>
+            <resource path="~/Mobile/Shared/searchfield/SearchField.js"/>
+            <resource path="~/Mobile/Explore/common/routingpath/routingpath.js"/>
+            <resource path="~/Mobile/Explore/common/Direction.js"/>
+            <resource path="~/Mobile/Explore/app/Application.js"/>
+            <resource path="~/Mobile/Explore/explore.js"/>
+        </resourceSet>
+        <!-- /Mobile -->
+
+
+        <!-- .................. -->
+        <!-- VDMS5 SYSTEM CONFIG -->
+        <!-- .................. -->
+
+        <resourceSet name="Map6Style" type="css" debugEnabled="true">
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/css/MapField.css" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/css/SearchField.css" />
+        </resourceSet>
+        <resourceSet name="Map6Script" type="js" debugEnabled="true">
+            <resource path="~/cdn/Libs/javascript.util.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1/vietbandomapsapi.js"/>
+            <resource path="~/cdn/API/VBDMapAPI.js"/>
+            <resource path="~/cdn/API/VBDMapAPI.GeoJSON.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/DrawShape.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapField.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/ViewMapControl.js" />
+            <resource path="~/cdn/ExtJS/6.2.0/packages/ux/classic/custom/vbd/form/MapSearchField.js" />
+            <resource path="~/cdn/vietbandomapapi/2.0.1//ContextMenu.js" />
+            <resource path="~/cdn/ExtJS/4.2.1/vbd/form/DrawTool.js" />
+        </resourceSet>
+        <!-- VDMS5-AJAXPRO -->
+        <resourceSet name="Ajaxpro" type="js">
+            <resource path="~/ajaxpro/prototype.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/core.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/converter.ashx" mode="dynamic"/>
+        </resourceSet>
+        <!-- /VDMS5-AJAXPRO -->
+
+        <resourceSet name="VDMS5_Data_Ajax" type="js">
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.FolderAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.SearchAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.FileAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.RegionAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.LayerAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.ReportAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.UserAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.GroupAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.PortletAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/AJLocationSearch,Vietbando.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.ShareLayerAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Web.Library.AJAX.WGS84VN2000ConvertorAjax,VDMS.Web.Library.ashx" mode="dynamic"/>
+            <resource path="~/ajaxpro/VDMS.Report.Library.AJAX.ReportAjax,VDMS.Report.Library.ashx" mode="dynamic"/>
+        </resourceSet>
+
+        <resourceSet name="css" type="css" debugEnabled="true">
+            <resource path="~/Content/Site.css" />
+        </resourceSet>
+
+        <!-- VDMS5 -->
+        <resourceSet name="VDMS5_UserInfo" type="js" debugEnabled="false">
+            <resource path="~/App/Document/app/view/UserProfile.js" />
+            <resource path="~/App/Document/app/view/UserPassword.js" />
+            <resource path="~/App/Document/app/controller/UserProfile.js" />
+            <resource path="~/App/Document/app/controller/UserPassword.js" />
+
+            <resource path="~/Scripts/UserInfo_Override/override_UserProfileController.js" />
+            <resource path="~/Scripts/UserInfo_Override/override_UserProfileView.js" />
+
+        </resourceSet>
+
+        <resourceSet name="SharedPrintPage" type="js" debugEnabled="true">
+            <resource path="~/Scripts/Shared/view/SharedPrintPage.js" />
+            <resource path="~/Scripts/Shared/controller/SharedPrintPage.js" />
+        </resourceSet>
+
+        <resourceSet name="VDMS5" type="js" debugEnabled="false">
+            <resource reference="AjaxProxyComponent" />
+            <resource reference="VDMS5_UserInfo" />
+
+            <resource path="~/App/Shared/app/UrlConfigGlobal.js" />
+            <resource path="~/App/Document/app/Global.js" />
+            <resource path="~/App/Document/app/Navigator/view/BreadcrumbGroupButton.js" />
+            <resource path="~/App/Shared/app/view/ViewQueryComponent.js" />
+          
+
+            <resource path="~/Scripts/Common/view/Navigation.js" />
+            <resource path="~/Scripts/Common/controller/Navigation.js" />
+
+            <resource path="~/Scripts/Home/view/Welcome.js" />
+            <resource path="~/Scripts/Home/controller/Welcome.js" />
+            <resource path="~/Scripts/Home/view/HomeViewport.js" />
+            <resource path="~/Scripts/Home/controller/HomeViewport.js" />
+            <resource path="~/Scripts/Home/Home.js" />
+        </resourceSet>
+
+        <resourceSet name="VDMS5_Style" type="css" debugEnabled="true">
+            <resource path="~/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+            <resource path="~/cdn/icons/styles/vdms.min.css" />
+            <resource path="~/cdn/vdms/main.min.css" />
+            <resource path="~/Content/Home/main.css" />
+            <resource path="~/Content/Home/home.css" />
+            <!--<resource path="~/App/Document/style/main.css" />-->
+        </resourceSet>
+
+    </resourceSets>
+</combres>

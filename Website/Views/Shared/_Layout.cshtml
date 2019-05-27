@@ -1,0 +1,53 @@
+﻿@using Combres.Mvc;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="home" id="ApplicationRoot" href="@Url.Content("~/")" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+    @Url.CombresLink("css")
+    @Url.CombresLink("GlobalExtJs6Theme")
+
+</head>
+<body>
+    
+    @RenderSection("styles", required: false)
+
+    @*Ajaxpro*@
+    @Url.CombresLink("Ajaxpro")
+    @*/Ajaxpro*@
+    
+    @RenderSection("ajaxpro", required: false)
+
+    @Url.CombresLink("GlobalExtJs6Script")
+
+    <div id="divBodyRender">
+        @*@if (ViewBag._GetInitData != null)
+        {
+            <script type="text/javascript">
+                @Html.Raw(ViewBag._GetInitData)
+            </script>
+        }
+
+        @if (ViewBag._GetAuthenticatInfo != null)
+        {
+            <script type="text/javascript">
+                @Html.Raw(ViewBag._GetAuthenticatInfo)
+            </script>
+        }
+        @if (ViewBag._GetRolesInfo != null)
+        {
+            <script type="text/javascript">
+                @Html.Raw(ViewBag._GetRolesInfo)
+            </script>
+        }*@
+        @RenderBody()
+    </div>
+
+    @*@RenderPage("_AnalyticsUserControl.cshtml")*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

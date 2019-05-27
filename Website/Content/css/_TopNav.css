@@ -1,0 +1,331 @@
+﻿body, html, .row-offcanvas {
+    height: 100%;
+}
+
+.nav_menu .logo-iwms {
+    color: #fff;
+    font-weight: 600px;
+    letter-spacing: -0.5px;
+    padding-top: 10px
+}
+
+.top_nav {
+   padding: 0.5em
+}
+
+.top_nav .navbar-right > li > a {
+    color: #fff !important;
+    padding: 11px 15px 10px;
+}
+
+    .top_nav .navbar-right > li > a:hover {
+        text-decoration: underline;
+    }
+
+    .top_nav .navbar-right > li > a:focus,
+    .top_nav .navbar-right > li > a:hover {
+        background: none !important;
+    }
+
+.top_nav .navbar-right .user-profile img {
+    width: 36px;
+    height: 36px;
+}
+
+.nav_title .site_title {
+    padding-left: 12px;
+}
+
+.dropdown-menu {
+    z-index: 9999999 !important
+}
+
+#menuTop li a {
+    font: 300 14px/18px helvetica,arial,verdana,sans-serif;
+    color: white;
+}
+
+    #menuTop li a:hover, .navbar-inverse .navbar-nav > .open > a {
+        background: #33884e !important;
+        text-decoration: none !important;
+    }
+    #menuTop li a img{
+        width: 25px;
+    }
+
+#sidebar {
+    width: inherit;
+    min-width: 220px;
+    max-width: 220px;
+    background-color: #f5f5f5;
+    float: left;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#main {
+    height: 100%;
+    overflow: auto;
+    background-color: whitesmoke;
+}
+
+.movie {
+}
+
+.panel-body h4 {
+    color: #a55400;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.shortPanel {
+    max-height: 282px !important;
+    overflow-y: auto;
+}
+
+.shortPadding {
+    padding: 1px !important;
+}
+
+.shortMargin {
+    margin: 0 !important;
+}
+
+ul.pagination > li {
+    cursor: pointer;
+}
+
+/* Fixes alignment in nav lists */
+.nav-pills [class^="fa-"],
+.nav-pills [class*=" fa-"] {
+    line-height: inherit;
+}
+
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        width: calc(100% + 220px);
+    }
+
+    .row-offcanvas-left {
+        left: -220px;
+    }
+
+        .row-offcanvas-left.active {
+            left: 0;
+        }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .movieDescription {
+        margin-left: 240px !important;
+    }
+}
+
+@media (max-width: 490px) {
+    .movieDescription {
+        margin-left: 125px !important;
+    }
+}
+
+
+.shortInputSearch {
+    width: 300px;
+    float: right !important;
+}
+
+
+.black {
+    color: black !important;
+}
+
+
+/*Validation Errors*/
+.has-error .control-label {
+    color: #FFB658 !important;
+}
+
+.movieDescription {
+    margin-left: 335px;
+}
+
+/* Autocomplete section */
+.angucomplete-dropdown {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.angucomplete-holder {
+    position: relative;
+}
+
+.angucomplete-dropdown {
+    border-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    width: 250px;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    /*top: 32px;
+	left: 0px;
+	*/
+    margin-top: -6px;
+    background-color: #ffffff;
+}
+
+.angucomplete-searching {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.angucomplete-description {
+    font-size: 14px;
+}
+
+.angucomplete-row {
+    padding: 5px;
+    color: #000000;
+    margin-bottom: 4px;
+    clear: both;
+}
+
+.angucomplete-selected-row {
+    background-color: lightblue;
+    color: #ffffff;
+}
+
+.angucomplete-image-holder {
+    padding-top: 2px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.angucomplete-image {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border-color: #ececec;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.angucomplete-image-default {
+    /* Add your own default image here
+	 background-image: url('/assets/default.png');
+	*/
+    background-position: center;
+    background-size: contain;
+    height: 34px;
+    width: 34px;
+}
+
+.red {
+    color: red;
+}
+/* .modal-transparent */
+
+.modal-transparent {
+    background: transparent;
+}
+
+    .modal-transparent .modal-content {
+        background: transparent;
+    }
+
+.modal-backdrop.modal-backdrop-transparent {
+    background: #ffffff;
+}
+
+    .modal-backdrop.modal-backdrop-transparent.in {
+        opacity: .9;
+        filter: alpha(opacity=90);
+    }
+
+/* .modal-fullscreen */
+
+.modal-fullscreen {
+    /*background: transparent;*/
+}
+
+    .modal-fullscreen .modal-content {
+        /*background: transparent;*/
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.modal-backdrop.modal-backdrop-fullscreen {
+    background: #ffffff;
+}
+
+    .modal-backdrop.modal-backdrop-fullscreen.in {
+        opacity: .97;
+        filter: alpha(opacity=97);
+    }
+
+.modal-fullscreen .modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .modal-fullscreen .modal-dialog {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-fullscreen .modal-dialog {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-fullscreen .modal-dialog {
+        width: 1170px;
+    }
+}
+
+md-dialog {
+    max-width: 90%;
+    max-height: 95%;
+}
+
+    md-dialog .dialogChoiceMore {
+        max-height: 90%;
+    }
+
+    md-dialog .md-dialog-content {
+        padding: 1px;
+    }
+
+md-input-container {
+    padding: 0px;
+    margin: 0px;
+}

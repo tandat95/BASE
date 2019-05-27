@@ -1,0 +1,148 @@
+﻿
+@using Microsoft.AspNet.Identity
+
+<style>
+    #logoutForm .navbar-nav > li > a {
+        padding-top: 8px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .dropdown-menu > li > a:hover {
+        background: #accfc5 !important;
+    }
+</style>
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right" style="height: 52px!important;" id="frmUser">
+            <li>
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="height: 52px">
+                    <img src="~/Content/css/images/user-default.png" /> <b>@User.Identity.Name</b>
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu">
+                    <li>
+                        <a href="#" id="bntUserInfo">
+                            Thông tin <i class="fa fa-info-circle pull-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="bntUserPass">
+                            Đổi mật khẩu <i class="fa fa-key pull-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:sessionStorage.removeItem('accessToken'); document.getElementById('logoutForm').submit();">
+                            Đăng xuất <i class="fa fa-sign-out pull-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" style="height: 52px!important;">
+            <li>
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="font: 300 14px/18px helvetica,arial,verdana,sans-serif; color: white;padding-top: 15px!important; height: 52px">
+                    <img src="/images/icon-app/admin.png" style="width: 25px"> <b>Quản trị</b>
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu" style="width: 190px">
+                    <li>
+                        <a href="#">
+                            Định nghĩa tài liệu <i class="fa fa-file-text-o pull-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Biên tập dữ liệu <i class="fa fa-edit pull-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:sessionStorage.removeItem('accessToken'); document.getElementById('logoutForm').submit();">
+                            Quản lý tài khoản <i class="fa fa-users pull-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+
+
+<!--Modal-->
+<div class="modal" id="userProfileModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thông tin người dùng</h4>
+            </div>
+            <div class="modal-body">
+                @*<iframe id="userProfileIframe" src="~/Main/IframeUserProfile.aspx" style="width: 100%; height: 600px; background: #2A3F54;"></iframe>*@
+                nội dung
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closeModal"> Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="userPasswordModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thay đổi mật khẩu</h4>
+            </div>
+            <div class="modal-body">
+                @*<iframe id="userProfileIframe" src="~/Main/IframeUserProfile.aspx" style="width: 100%; height: 600px; background: #2A3F54;"></iframe>*@
+                nội dung
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closeModal"> Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+
+        let userProfileModal = $('#userProfileModal');
+        let bntUserInfo = $("#bntUserInfo");
+        let btnCloseUserProfile = userProfileModal.find(".closeModal");
+
+        bntUserInfo.on("click", function () {
+            userProfileModal.show();
+        });
+
+        btnCloseUserProfile.on("click", function () {
+            userProfileModal.hide();
+        });
+
+
+        let userPasswordModal = $('#userPasswordModal');
+        let bntUserPass = $("#bntUserPass");
+        let btnCloseUserPass = userPasswordModal.find(".closeModal");
+
+        bntUserPass.on("click", function () {
+            userPasswordModal.show();
+        });
+
+        btnCloseUserPass.on("click", function () {
+            userPasswordModal.hide();
+        });
+
+
+    });
+</script>

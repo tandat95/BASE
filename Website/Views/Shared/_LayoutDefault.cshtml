@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+@using Combres.Mvc;
+@using Newtonsoft.Json;
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="home" id="ApplicationRoot" href="@Url.Content("~/")" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Content/plugins/jquery/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/plugins/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="nav-md">
+    <script type="text/javascript">
+        var _WEB_URL = location.origin + '/' + '@Url.Content("~/")';
+    </script>
+
+    @RenderPage("_TopNav.cshtml")
+    <!-- /top navigation -->
+    <!-- page content -->
+
+    <div class="col-md-12" style="padding-right:0px; height:calc(100% - 58px); overflow-y:auto; overflow-x:hidden">
+        @Url.CombresLink("Ajaxpro")
+        @Url.CombresLink("TIMS_Data_Ajax")
+        @RenderBody()
+    </div>
+
+    <div id="dvModalContainer"></div>
+
+
+    @*<script src="~/Scripts/TIMS.js"></script>*@
+
+    @RenderSection("scripts", required: false)
+</body>
+
+
+</html>
+<script>
+    $(document).ready(function () {
+        $('#menu_toggle').trigger('click');
+    });
+</script>

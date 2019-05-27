@@ -1,0 +1,15 @@
+﻿
+
+.x-tool-img {
+    background-image: url(../images/tools/tool-sprites-light.png) !important;
+}
+
+.app-container-list {
+    display: table;
+    width: 100%;
+}
+
+    .app-container-list .list-menu {
+        vertical-align: middle;
+        display: table-cell;
+    }

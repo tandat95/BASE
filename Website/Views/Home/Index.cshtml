@@ -1,0 +1,40 @@
+﻿@using Combres.Mvc;
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section ajaxpro
+{
+    @Url.CombresLink("VDMS5_Data_Ajax")
+}
+
+@section styles{
+    @Url.CombresLink("VDMS5_Style")
+}
+
+<link href="~/Content/Common/common.css" rel="stylesheet" />
+<link href="~/Content/Common/admin.css" rel="stylesheet" />
+
+<div class="authenContainer">
+    <span id="LoginName">@User.Identity.Name</span>
+    <span ID="LoginStatus" id="LoginStatus" runat="server"></span>
+</div>
+
+<div id="divContent">
+    <div id="loading-mask">
+    </div>
+    <div id="loading">
+        <div class="loading-child">
+        </div>
+        <span></span>
+    </div>
+
+</div>
+
+@section Scripts{
+    @Url.CombresLink("VDMS5")
+}
+
+
+
